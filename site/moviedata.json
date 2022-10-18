@@ -1,11 +1,10 @@
 [
   {
-    "id": 1,
     "title": "Shrek",
     "oscar": 1,
     "rating": 7.9,
-    "nomination-year": 2002,
-    "runtime-min": 90,
+    "nominationYear": 2002,
+    "runtimeMin": 90,
     "year": 2001,
     "votes": 671808,
     "directors": "Vicky Jenson, Andrew Adamson",
@@ -13,12 +12,11 @@
     "url": "https://www.imdb.com/title/tt0126029/"
   },
   {
-    "id": 2,
     "title": "Jimmy Neutron: Boy Genius",
     "oscar": 0,
     "rating": 6,
-    "nomination-year": 2002,
-    "runtime-min": 82,
+    "nominationYear": 2002,
+    "runtimeMin": 82,
     "year": 2001,
     "votes": 34936,
     "directors": "John A. Davis",
@@ -26,12 +24,11 @@
     "url": "https://www.imdb.com/title/tt0268397/"
   },
   {
-    "id": 3,
     "title": "Monsters, Inc.",
     "oscar": 0,
     "rating": 8.1,
-    "nomination-year": 2002,
-    "runtime-min": 92,
+    "nominationYear": 2002,
+    "runtimeMin": 92,
     "year": 2001,
     "votes": 901572,
     "directors": "David Silverman, Pete Docter, Lee Unkrich",
@@ -39,12 +36,11 @@
     "url": "https://www.imdb.com/title/tt0198781/"
   },
   {
-    "id": 4,
     "title": "Sen to Chihiro no kamikakushi",
     "oscar": 1,
     "rating": 8.6,
-    "nomination-year": 2003,
-    "runtime-min": 125,
+    "nominationYear": 2003,
+    "runtimeMin": 125,
     "year": 2001,
     "votes": 753001,
     "directors": "Hayao Miyazaki",
@@ -52,12 +48,11 @@
     "url": "https://www.imdb.com/title/tt0245429/"
   },
   {
-    "id": 5,
     "title": "Ice Age",
     "oscar": 1,
     "rating": 7.5,
-    "nomination-year": 2003,
-    "runtime-min": 81,
+    "nominationYear": 2003,
+    "runtimeMin": 81,
     "year": 2002,
     "votes": 481030,
     "directors": "Chris Wedge, Carlos Saldanha",
@@ -65,12 +60,11 @@
     "url": "https://www.imdb.com/title/tt0268380/"
   },
   {
-    "id": 6,
     "title": "Lilo & Stitch",
     "oscar": 0,
     "rating": 7.3,
-    "nomination-year": 2003,
-    "runtime-min": 85,
+    "nominationYear": 2003,
+    "runtimeMin": 85,
     "year": 2002,
     "votes": 190564,
     "directors": "Dean DeBlois, Chris Sanders",
@@ -78,12 +72,11 @@
     "url": "https://www.imdb.com/title/tt0275847/"
   },
   {
-    "id": 7,
     "title": "Spirit",
     "oscar": 0,
     "rating": 7.1,
-    "nomination-year": 2003,
-    "runtime-min": 83,
+    "nominationYear": 2003,
+    "runtimeMin": 83,
     "year": 2002,
     "votes": 76342,
     "directors": "Lorna Cook, Kelly Asbury",
@@ -91,12 +84,11 @@
     "url": "https://www.imdb.com/title/tt0166813/"
   },
   {
-    "id": 8,
     "title": "Planète au trésor",
     "oscar": 0,
     "rating": 7.1,
-    "nomination-year": 2003,
-    "runtime-min": 95,
+    "nominationYear": 2003,
+    "runtimeMin": 95,
     "year": 2003,
     "votes": 118687,
     "directors": "Ron Clements, John Musker",
@@ -104,12 +96,11 @@
     "url": "https://www.imdb.com/title/tt0133240/"
   },
   {
-    "id": 9,
     "title": "Finding Nemo",
     "oscar": 1,
     "rating": 8.2,
-    "nomination-year": 2004,
-    "runtime-min": 100,
+    "nominationYear": 2004,
+    "runtimeMin": 100,
     "year": 2003,
     "votes": 1035768,
     "directors": "Andrew Stanton, Lee Unkrich",
@@ -117,12 +108,11 @@
     "url": "https://www.imdb.com/title/tt0266543/"
   },
   {
-    "id": 10,
     "title": "Brother Bear",
     "oscar": 0,
     "rating": 6.8,
-    "nomination-year": 2004,
-    "runtime-min": 85,
+    "nominationYear": 2004,
+    "runtimeMin": 85,
     "year": 2003,
     "votes": 111051,
     "directors": "Aaron Blaise, Robert Walker",
@@ -130,12 +120,11 @@
     "url": "https://www.imdb.com/title/tt0328880/"
   },
   {
-    "id": 11,
     "title": "Les triplettes de Belleville",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2004,
-    "runtime-min": 80,
+    "nominationYear": 2004,
+    "runtimeMin": 80,
     "year": 2003,
     "votes": 54608,
     "directors": "Sylvain Chomet",
@@ -143,12 +132,11 @@
     "url": "https://www.imdb.com/title/tt0286244/"
   },
   {
-    "id": 12,
     "title": "The Incredibles",
     "oscar": 1,
     "rating": 8,
-    "nomination-year": 2005,
-    "runtime-min": 115,
+    "nominationYear": 2005,
+    "runtimeMin": 115,
     "year": 2004,
     "votes": 730459,
     "directors": "Brad Bird",
@@ -156,12 +144,11 @@
     "url": "https://www.imdb.com/title/tt0317705/"
   },
   {
-    "id": 13,
     "title": "Shark Tale",
     "oscar": 0,
     "rating": 6,
-    "nomination-year": 2005,
-    "runtime-min": 90,
+    "nominationYear": 2005,
+    "runtimeMin": 90,
     "year": 2004,
     "votes": 183437,
     "directors": "Bibo Bergeron, Vicky Jenson, Rob Letterman",
@@ -169,12 +156,11 @@
     "url": "https://www.imdb.com/title/tt0307453/"
   },
   {
-    "id": 14,
     "title": "Shrek 2",
     "oscar": 0,
     "rating": 7.3,
-    "nomination-year": 2005,
-    "runtime-min": 93,
+    "nominationYear": 2005,
+    "runtimeMin": 93,
     "year": 2004,
     "votes": 460665,
     "directors": "Conrad Vernon, Kelly Asbury, Andrew Adamson",
@@ -182,12 +168,11 @@
     "url": "https://www.imdb.com/title/tt0298148/"
   },
   {
-    "id": 15,
     "title": "The Curse of the Were-Rabbit",
     "oscar": 1,
     "rating": 7.5,
-    "nomination-year": 2006,
-    "runtime-min": 85,
+    "nominationYear": 2006,
+    "runtimeMin": 85,
     "year": 2005,
     "votes": 136127,
     "directors": "Nick Park, Steve Box",
@@ -195,12 +180,11 @@
     "url": "https://www.imdb.com/title/tt0312004/"
   },
   {
-    "id": 16,
     "title": "Corpse Bride",
     "oscar": 0,
     "rating": 7.3,
-    "nomination-year": 2006,
-    "runtime-min": 77,
+    "nominationYear": 2006,
+    "runtimeMin": 77,
     "year": 2005,
     "votes": 271450,
     "directors": "Tim Burton, Mike Johnson",
@@ -208,12 +192,11 @@
     "url": "https://www.imdb.com/title/tt0121164/"
   },
   {
-    "id": 17,
     "title": "Hauru no ugoku shiro",
     "oscar": 0,
     "rating": 8.2,
-    "nomination-year": 2006,
-    "runtime-min": 119,
+    "nominationYear": 2006,
+    "runtimeMin": 119,
     "year": 2004,
     "votes": 391411,
     "directors": "Hayao Miyazaki",
@@ -221,12 +204,11 @@
     "url": "https://www.imdb.com/title/tt0347149/"
   },
   {
-    "id": 18,
     "title": "Happy Feet",
     "oscar": 1,
     "rating": 6.4,
-    "nomination-year": 2007,
-    "runtime-min": 108,
+    "nominationYear": 2007,
+    "runtimeMin": 108,
     "year": 2006,
     "votes": 186217,
     "directors": "Judy Morris, Warren Coleman, George Miller",
@@ -234,12 +216,11 @@
     "url": "https://www.imdb.com/title/tt0366548/"
   },
   {
-    "id": 19,
     "title": "Cars",
     "oscar": 0,
     "rating": 7.2,
-    "nomination-year": 2007,
-    "runtime-min": 117,
+    "nominationYear": 2007,
+    "runtimeMin": 117,
     "year": 2006,
     "votes": 418804,
     "directors": "John Lasseter, Joe Ranft",
@@ -247,12 +228,11 @@
     "url": "https://www.imdb.com/title/tt0317219/"
   },
   {
-    "id": 20,
     "title": "Monster House",
     "oscar": 0,
     "rating": 6.6,
-    "nomination-year": 2007,
-    "runtime-min": 91,
+    "nominationYear": 2007,
+    "runtimeMin": 91,
     "year": 2006,
     "votes": 119769,
     "directors": "Gil Kenan",
@@ -260,12 +240,11 @@
     "url": "https://www.imdb.com/title/tt0385880/"
   },
   {
-    "id": 21,
     "title": "Ratatouille",
     "oscar": 1,
     "rating": 8.1,
-    "nomination-year": 2008,
-    "runtime-min": 111,
+    "nominationYear": 2008,
+    "runtimeMin": 111,
     "year": 2007,
     "votes": 727602,
     "directors": "Brad Bird, Jan Pinkava",
@@ -273,12 +252,11 @@
     "url": "https://www.imdb.com/title/tt0382932/"
   },
   {
-    "id": 22,
     "title": "Persepolis",
     "oscar": 0,
     "rating": 8,
-    "nomination-year": 2008,
-    "runtime-min": 96,
+    "nominationYear": 2008,
+    "runtimeMin": 96,
     "year": 2007,
     "votes": 94898,
     "directors": "Marjane Satrapi, Vincent Paronnaud",
@@ -286,12 +264,11 @@
     "url": "https://www.imdb.com/title/tt0808417/"
   },
   {
-    "id": 23,
     "title": "Surf's Up",
     "oscar": 0,
     "rating": 6.7,
-    "nomination-year": 2008,
-    "runtime-min": 85,
+    "nominationYear": 2008,
+    "runtimeMin": 85,
     "year": 2007,
     "votes": 80182,
     "directors": "Ash Brannon, Chris Buck",
@@ -299,12 +276,11 @@
     "url": "https://www.imdb.com/title/tt0423294/"
   },
   {
-    "id": 24,
     "title": "WALL·E",
     "oscar": 1,
     "rating": 8.4,
-    "nomination-year": 2009,
-    "runtime-min": 98,
+    "nominationYear": 2009,
+    "runtimeMin": 98,
     "year": 2008,
     "votes": 1105921,
     "directors": "Andrew Stanton",
@@ -312,12 +288,11 @@
     "url": "https://www.imdb.com/title/tt0910970/"
   },
   {
-    "id": 25,
     "title": "Bolt",
     "oscar": 0,
     "rating": 6.8,
-    "nomination-year": 2009,
-    "runtime-min": 96,
+    "nominationYear": 2009,
+    "runtimeMin": 96,
     "year": 2008,
     "votes": 210917,
     "directors": "Byron Howard, Chris Williams",
@@ -325,12 +300,11 @@
     "url": "https://www.imdb.com/title/tt0397892/"
   },
   {
-    "id": 26,
     "title": "Kung Fu Panda",
     "oscar": 0,
     "rating": 7.6,
-    "nomination-year": 2009,
-    "runtime-min": 92,
+    "nominationYear": 2009,
+    "runtimeMin": 92,
     "year": 2008,
     "votes": 466935,
     "directors": "Mark Osborne, John Stevenson",
@@ -338,12 +312,11 @@
     "url": "https://www.imdb.com/title/tt0441773/"
   },
   {
-    "id": 27,
     "title": "Up",
     "oscar": 1,
     "rating": 8.3,
-    "nomination-year": 2010,
-    "runtime-min": 96,
+    "nominationYear": 2010,
+    "runtimeMin": 96,
     "year": 2009,
     "votes": 1034825,
     "directors": "Pete Docter, Bob Peterson",
@@ -351,12 +324,11 @@
     "url": "https://www.imdb.com/title/tt1049413/"
   },
   {
-    "id": 28,
     "title": "Coraline",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2010,
-    "runtime-min": 100,
+    "nominationYear": 2010,
+    "runtimeMin": 100,
     "year": 2009,
     "votes": 226656,
     "directors": "Henry Selick",
@@ -364,12 +336,11 @@
     "url": "https://www.imdb.com/title/tt0327597/"
   },
   {
-    "id": 29,
     "title": "Fantastic Mr. Fox",
     "oscar": 0,
     "rating": 7.9,
-    "nomination-year": 2010,
-    "runtime-min": 87,
+    "nominationYear": 2010,
+    "runtimeMin": 87,
     "year": 2009,
     "votes": 230705,
     "directors": "Wes Anderson",
@@ -377,12 +348,11 @@
     "url": "https://www.imdb.com/title/tt0432283/"
   },
   {
-    "id": 30,
     "title": "The Princess and the Frog",
     "oscar": 0,
     "rating": 7.1,
-    "nomination-year": 2010,
-    "runtime-min": 97,
+    "nominationYear": 2010,
+    "runtimeMin": 97,
     "year": 2009,
     "votes": 144830,
     "directors": "Ron Clements, John Musker",
@@ -390,12 +360,11 @@
     "url": "https://www.imdb.com/title/tt0780521/"
   },
   {
-    "id": 31,
     "title": "The Secret of Kells",
     "oscar": 0,
     "rating": 7.6,
-    "nomination-year": 2010,
-    "runtime-min": 71,
+    "nominationYear": 2010,
+    "runtimeMin": 71,
     "year": 2009,
     "votes": 35672,
     "directors": "Nora Twomey, Tomm Moore",
@@ -403,12 +372,11 @@
     "url": "https://www.imdb.com/title/tt0485601/"
   },
   {
-    "id": 32,
     "title": "Toy Story 3",
     "oscar": 1,
     "rating": 8.3,
-    "nomination-year": 2011,
-    "runtime-min": 103,
+    "nominationYear": 2011,
+    "runtimeMin": 103,
     "year": 2010,
     "votes": 830130,
     "directors": "Lee Unkrich",
@@ -416,12 +384,11 @@
     "url": "https://www.imdb.com/title/tt0435761/"
   },
   {
-    "id": 33,
     "title": "How to Train Your Dragon",
     "oscar": 0,
     "rating": 8.1,
-    "nomination-year": 2011,
-    "runtime-min": 98,
+    "nominationYear": 2011,
+    "runtimeMin": 98,
     "year": 2010,
     "votes": 734664,
     "directors": "Dean DeBlois, Chris Sanders",
@@ -429,12 +396,11 @@
     "url": "https://www.imdb.com/title/tt0892769/"
   },
   {
-    "id": 34,
     "title": "L'illusionniste",
     "oscar": 0,
     "rating": 7.5,
-    "nomination-year": 2011,
-    "runtime-min": 90,
+    "nominationYear": 2011,
+    "runtimeMin": 90,
     "year": 2010,
     "votes": 35361,
     "directors": "Sylvain Chomet",
@@ -442,12 +408,11 @@
     "url": "https://www.imdb.com/title/tt0775489/"
   },
   {
-    "id": 35,
     "title": "Rango",
     "oscar": 1,
     "rating": 7.2,
-    "nomination-year": 2012,
-    "runtime-min": 107,
+    "nominationYear": 2012,
+    "runtimeMin": 107,
     "year": 2011,
     "votes": 264798,
     "directors": "Gore Verbinski",
@@ -455,12 +420,11 @@
     "url": "https://www.imdb.com/title/tt1192628/"
   },
   {
-    "id": 36,
     "title": "Une vie de chat",
     "oscar": 0,
     "rating": 6.9,
-    "nomination-year": 2012,
-    "runtime-min": 70,
+    "nominationYear": 2012,
+    "runtimeMin": 70,
     "year": 2010,
     "votes": 11335,
     "directors": "Alain Gagnol, Jean-Loup Felicioli",
@@ -468,12 +432,11 @@
     "url": "https://www.imdb.com/title/tt1673702/"
   },
   {
-    "id": 37,
     "title": "Chico & Rita",
     "oscar": 0,
     "rating": 7.2,
-    "nomination-year": 2012,
-    "runtime-min": 94,
+    "nominationYear": 2012,
+    "runtimeMin": 94,
     "year": 2010,
     "votes": 9233,
     "directors": "Javier Mariscal, Tono Errando, Fernando Trueba",
@@ -481,12 +444,11 @@
     "url": "https://www.imdb.com/title/tt1235830/"
   },
   {
-    "id": 38,
     "title": "Kung Fu Panda 2",
     "oscar": 0,
     "rating": 7.2,
-    "nomination-year": 2012,
-    "runtime-min": 90,
+    "nominationYear": 2012,
+    "runtimeMin": 90,
     "year": 2011,
     "votes": 284133,
     "directors": "Jennifer Yuh Nelson",
@@ -494,12 +456,11 @@
     "url": "https://www.imdb.com/title/tt1302011/"
   },
   {
-    "id": 39,
     "title": "Puss in Boots",
     "oscar": 0,
     "rating": 6.6,
-    "nomination-year": 2012,
-    "runtime-min": 90,
+    "nominationYear": 2012,
+    "runtimeMin": 90,
     "year": 2011,
     "votes": 159272,
     "directors": "Chris Miller",
@@ -507,12 +468,11 @@
     "url": "https://www.imdb.com/title/tt0448694/"
   },
   {
-    "id": 40,
     "title": "Brave",
     "oscar": 1,
     "rating": 7.1,
-    "nomination-year": 2013,
-    "runtime-min": 93,
+    "nominationYear": 2013,
+    "runtimeMin": 93,
     "year": 2012,
     "votes": 410015,
     "directors": "Steve Purcell, Mark Andrews, Brenda Chapman",
@@ -520,12 +480,11 @@
     "url": "https://www.imdb.com/title/tt1217209/"
   },
   {
-    "id": 41,
     "title": "Frankenweenie",
     "oscar": 0,
     "rating": 6.9,
-    "nomination-year": 2013,
-    "runtime-min": 87,
+    "nominationYear": 2013,
+    "runtimeMin": 87,
     "year": 2012,
     "votes": 107849,
     "directors": "Tim Burton",
@@ -533,12 +492,11 @@
     "url": "https://www.imdb.com/title/tt1142977/"
   },
   {
-    "id": 42,
     "title": "ParaNorman",
     "oscar": 0,
     "rating": 7,
-    "nomination-year": 2013,
-    "runtime-min": 92,
+    "nominationYear": 2013,
+    "runtimeMin": 92,
     "year": 2012,
     "votes": 102727,
     "directors": "Sam Fell, Chris Butler",
@@ -546,12 +504,11 @@
     "url": "https://www.imdb.com/title/tt1623288/"
   },
   {
-    "id": 43,
     "title": "The Pirates! In an Adventure with Scientists!",
     "oscar": 0,
     "rating": 6.7,
-    "nomination-year": 2013,
-    "runtime-min": 88,
+    "nominationYear": 2013,
+    "runtimeMin": 88,
     "year": 2012,
     "votes": 48641,
     "directors": "Peter Lord, Jeff Newitt",
@@ -559,12 +516,11 @@
     "url": "https://www.imdb.com/title/tt1430626/"
   },
   {
-    "id": 44,
     "title": "Wreck-It Ralph",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2013,
-    "runtime-min": 101,
+    "nominationYear": 2013,
+    "runtimeMin": 101,
     "year": 2012,
     "votes": 420785,
     "directors": "Rich Moore",
@@ -572,12 +528,11 @@
     "url": "https://www.imdb.com/title/tt1772341/"
   },
   {
-    "id": 45,
     "title": "Frozen",
     "oscar": 1,
     "rating": 7.4,
-    "nomination-year": 2014,
-    "runtime-min": 102,
+    "nominationYear": 2014,
+    "runtimeMin": 102,
     "year": 2013,
     "votes": 621188,
     "directors": "Jennifer Lee, Chris Buck",
@@ -585,12 +540,11 @@
     "url": "https://www.imdb.com/title/tt2294629/"
   },
   {
-    "id": 46,
     "title": "The Croods",
     "oscar": 0,
     "rating": 7.2,
-    "nomination-year": 2014,
-    "runtime-min": 98,
+    "nominationYear": 2014,
+    "runtimeMin": 98,
     "year": 2013,
     "votes": 214761,
     "directors": "Kirk DeMicco, Chris Sanders",
@@ -598,12 +552,11 @@
     "url": "https://www.imdb.com/title/tt0481499/"
   },
   {
-    "id": 47,
     "title": "Despicable Me 2",
     "oscar": 0,
     "rating": 7.3,
-    "nomination-year": 2014,
-    "runtime-min": 98,
+    "nominationYear": 2014,
+    "runtimeMin": 98,
     "year": 2013,
     "votes": 399710,
     "directors": "Chris Renaud, Pierre Coffin",
@@ -611,12 +564,11 @@
     "url": "https://www.imdb.com/title/tt1690953/"
   },
   {
-    "id": 48,
     "title": "Ernest et Célestine",
     "oscar": 0,
     "rating": 7.8,
-    "nomination-year": 2014,
-    "runtime-min": 80,
+    "nominationYear": 2014,
+    "runtimeMin": 80,
     "year": 2012,
     "votes": 20603,
     "directors": "Stéphane Aubier, Benjamin Renner, Vincent Patar",
@@ -624,12 +576,11 @@
     "url": "https://www.imdb.com/title/tt1816518/"
   },
   {
-    "id": 49,
     "title": "Kaze tachinu",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2014,
-    "runtime-min": 126,
+    "nominationYear": 2014,
+    "runtimeMin": 126,
     "year": 2013,
     "votes": 85943,
     "directors": "Hayao Miyazaki",
@@ -637,12 +588,11 @@
     "url": "https://www.imdb.com/title/tt2013293/"
   },
   {
-    "id": 50,
     "title": "Big Hero 6",
     "oscar": 1,
     "rating": 7.8,
-    "nomination-year": 2015,
-    "runtime-min": 102,
+    "nominationYear": 2015,
+    "runtimeMin": 102,
     "year": 2014,
     "votes": 458927,
     "directors": "Chris Williams, Don Hall",
@@ -650,12 +600,11 @@
     "url": "https://www.imdb.com/title/tt2245084/"
   },
   {
-    "id": 51,
     "title": "The Boxtrolls",
     "oscar": 0,
     "rating": 6.8,
-    "nomination-year": 2015,
-    "runtime-min": 96,
+    "nominationYear": 2015,
+    "runtimeMin": 96,
     "year": 2014,
     "votes": 58101,
     "directors": "Anthony Stacchi, Graham Annable",
@@ -663,12 +612,11 @@
     "url": "https://www.imdb.com/title/tt0787474/"
   },
   {
-    "id": 52,
     "title": "How to Train Your Dragon 2",
     "oscar": 0,
     "rating": 7.8,
-    "nomination-year": 2015,
-    "runtime-min": 102,
+    "nominationYear": 2015,
+    "runtimeMin": 102,
     "year": 2014,
     "votes": 334503,
     "directors": "Dean DeBlois",
@@ -676,12 +624,11 @@
     "url": "https://www.imdb.com/title/tt1646971/"
   },
   {
-    "id": 53,
     "title": "Song of the Sea",
     "oscar": 0,
     "rating": 8,
-    "nomination-year": 2015,
-    "runtime-min": 93,
+    "nominationYear": 2015,
+    "runtimeMin": 93,
     "year": 2014,
     "votes": 58479,
     "directors": "Tomm Moore",
@@ -689,12 +636,11 @@
     "url": "https://www.imdb.com/title/tt1865505/"
   },
   {
-    "id": 54,
     "title": "Kaguya-hime no Monogatari",
     "oscar": 0,
     "rating": 8,
-    "nomination-year": 2015,
-    "runtime-min": 137,
+    "nominationYear": 2015,
+    "runtimeMin": 137,
     "year": 2013,
     "votes": 46816,
     "directors": "Isao Takahata",
@@ -702,12 +648,11 @@
     "url": "https://www.imdb.com/title/tt2576852/"
   },
   {
-    "id": 55,
     "title": "Inside Out",
     "oscar": 1,
     "rating": 8.2,
-    "nomination-year": 2016,
-    "runtime-min": 95,
+    "nominationYear": 2016,
+    "runtimeMin": 95,
     "year": 2015,
     "votes": 706053,
     "directors": "Pete Docter, Ronnie Del Carmen",
@@ -715,12 +660,11 @@
     "url": "https://www.imdb.com/title/tt2096673/"
   },
   {
-    "id": 56,
     "title": "Anomalisa",
     "oscar": 0,
     "rating": 7.2,
-    "nomination-year": 2016,
-    "runtime-min": 90,
+    "nominationYear": 2016,
+    "runtimeMin": 90,
     "year": 2015,
     "votes": 72053,
     "directors": "Charlie Kaufman, Duke Johnson",
@@ -728,12 +672,11 @@
     "url": "https://www.imdb.com/title/tt2401878/"
   },
   {
-    "id": 57,
     "title": "O Menino e o Mundo",
     "oscar": 0,
     "rating": 7.5,
-    "nomination-year": 2016,
-    "runtime-min": 80,
+    "nominationYear": 2016,
+    "runtimeMin": 80,
     "year": 2013,
     "votes": 7085,
     "directors": "Alê Abreu",
@@ -741,12 +684,11 @@
     "url": "https://www.imdb.com/title/tt3183630/"
   },
   {
-    "id": 58,
     "title": "Shaun the Sheep Movie",
     "oscar": 0,
     "rating": 7.3,
-    "nomination-year": 2016,
-    "runtime-min": 85,
+    "nominationYear": 2016,
+    "runtimeMin": 85,
     "year": 2015,
     "votes": 40924,
     "directors": "Mark Burton, Richard Starzak",
@@ -754,12 +696,11 @@
     "url": "https://www.imdb.com/title/tt2872750/"
   },
   {
-    "id": 59,
     "title": "Omoide no Marnie",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2016,
-    "runtime-min": 103,
+    "nominationYear": 2016,
+    "runtimeMin": 103,
     "year": 2014,
     "votes": 40792,
     "directors": "Hiromasa Yonebayashi",
@@ -767,12 +708,11 @@
     "url": "https://www.imdb.com/title/tt3398268/"
   },
   {
-    "id": 60,
     "title": "Zootopia",
     "oscar": 1,
     "rating": 8,
-    "nomination-year": 2017,
-    "runtime-min": 108,
+    "nominationYear": 2017,
+    "runtimeMin": 108,
     "year": 2016,
     "votes": 494293,
     "directors": "Rich Moore, Jared Bush, Byron Howard",
@@ -780,12 +720,11 @@
     "url": "https://www.imdb.com/title/tt2948356/"
   },
   {
-    "id": 61,
     "title": "Kubo and the Two Strings",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2017,
-    "runtime-min": 101,
+    "nominationYear": 2017,
+    "runtimeMin": 101,
     "year": 2016,
     "votes": 129218,
     "directors": "Travis Knight",
@@ -793,12 +732,11 @@
     "url": "https://www.imdb.com/title/tt4302938/"
   },
   {
-    "id": 62,
     "title": "Moana",
     "oscar": 0,
     "rating": 7.6,
-    "nomination-year": 2017,
-    "runtime-min": 107,
+    "nominationYear": 2017,
+    "runtimeMin": 107,
     "year": 2016,
     "votes": 332532,
     "directors": "Don Hall, Ron Clements, Chris Williams, John Musker",
@@ -806,12 +744,11 @@
     "url": "https://www.imdb.com/title/tt3521164/"
   },
   {
-    "id": 63,
     "title": "Ma vie de Courgette",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2017,
-    "runtime-min": 66,
+    "nominationYear": 2017,
+    "runtimeMin": 66,
     "year": 2016,
     "votes": 25656,
     "directors": "Claude Barras",
@@ -819,12 +756,11 @@
     "url": "https://www.imdb.com/title/tt2321405/"
   },
   {
-    "id": 64,
     "title": "La tortue rouge",
     "oscar": 0,
     "rating": 7.5,
-    "nomination-year": 2017,
-    "runtime-min": 80,
+    "nominationYear": 2017,
+    "runtimeMin": 80,
     "year": 2016,
     "votes": 35296,
     "directors": "Michael Dudok de Wit",
@@ -832,12 +768,11 @@
     "url": "https://www.imdb.com/title/tt3666024/"
   },
   {
-    "id": 65,
     "title": "Coco",
     "oscar": 1,
     "rating": 8.4,
-    "nomination-year": 2018,
-    "runtime-min": 105,
+    "nominationYear": 2018,
+    "runtimeMin": 105,
     "year": 2017,
     "votes": 497655,
     "directors": "Adrian Molina, Lee Unkrich",
@@ -845,12 +780,11 @@
     "url": "https://www.imdb.com/title/tt2380307/"
   },
   {
-    "id": 66,
     "title": "The Boss Baby",
     "oscar": 0,
     "rating": 6.3,
-    "nomination-year": 2018,
-    "runtime-min": 97,
+    "nominationYear": 2018,
+    "runtimeMin": 97,
     "year": 2017,
     "votes": 126760,
     "directors": "Tom McGrath",
@@ -858,12 +792,11 @@
     "url": "https://www.imdb.com/title/tt3874544/"
   },
   {
-    "id": 67,
     "title": "The Breadwinner",
     "oscar": 0,
     "rating": 7.7,
-    "nomination-year": 2018,
-    "runtime-min": 94,
+    "nominationYear": 2018,
+    "runtimeMin": 94,
     "year": 2017,
     "votes": 25585,
     "directors": "Nora Twomey",
@@ -871,12 +804,11 @@
     "url": "https://www.imdb.com/title/tt3901826/"
   },
   {
-    "id": 68,
     "title": "Ferdinand",
     "oscar": 0,
     "rating": 6.7,
-    "nomination-year": 2018,
-    "runtime-min": 108,
+    "nominationYear": 2018,
+    "runtimeMin": 108,
     "year": 2017,
     "votes": 57536,
     "directors": "Carlos Saldanha",
@@ -884,12 +816,11 @@
     "url": "https://www.imdb.com/title/tt3411444/"
   },
   {
-    "id": 69,
     "title": "Loving Vincent",
     "oscar": 0,
     "rating": 7.8,
-    "nomination-year": 2018,
-    "runtime-min": 94,
+    "nominationYear": 2018,
+    "runtimeMin": 94,
     "year": 2017,
     "votes": 58090,
     "directors": "Dorota Kobiela, Hugh Welchman",
@@ -897,12 +828,11 @@
     "url": "https://www.imdb.com/title/tt3262342/"
   },
   {
-    "id": 70,
     "title": "Spider-Man: Into the Spider-Verse",
     "oscar": 1,
     "rating": 8.4,
-    "nomination-year": 2019,
-    "runtime-min": 117,
+    "nominationYear": 2019,
+    "runtimeMin": 117,
     "year": 2018,
     "votes": 517204,
     "directors": "Bob Persichetti, Rodney Rothman, Peter Ramsey",
@@ -910,12 +840,11 @@
     "url": "https://www.imdb.com/title/tt4633694/"
   },
   {
-    "id": 71,
     "title": "Incredibles 2",
     "oscar": 0,
     "rating": 7.6,
-    "nomination-year": 2019,
-    "runtime-min": 118,
+    "nominationYear": 2019,
+    "runtimeMin": 118,
     "year": 2018,
     "votes": 294706,
     "directors": "Brad Bird",
@@ -923,12 +852,11 @@
     "url": "https://www.imdb.com/title/tt3606756/"
   },
   {
-    "id": 72,
     "title": "Isle of Dogs",
     "oscar": 0,
     "rating": 7.8,
-    "nomination-year": 2019,
-    "runtime-min": 101,
+    "nominationYear": 2019,
+    "runtimeMin": 101,
     "year": 2018,
     "votes": 167944,
     "directors": "Wes Anderson",
@@ -936,12 +864,11 @@
     "url": "https://www.imdb.com/title/tt5104604/"
   },
   {
-    "id": 73,
     "title": "Mirai no Mirai",
     "oscar": 0,
     "rating": 7,
-    "nomination-year": 2019,
-    "runtime-min": 98,
+    "nominationYear": 2019,
+    "runtimeMin": 98,
     "year": 2018,
     "votes": 15984,
     "directors": "Mamoru Hosoda",
@@ -949,12 +876,11 @@
     "url": "https://www.imdb.com/title/tt6900448/"
   },
   {
-    "id": 74,
     "title": "Ralph Breaks the Internet",
     "oscar": 0,
     "rating": 7,
-    "nomination-year": 2019,
-    "runtime-min": 112,
+    "nominationYear": 2019,
+    "runtimeMin": 112,
     "year": 2018,
     "votes": 160370,
     "directors": "Rich Moore, Phil Johnston",
@@ -962,12 +888,11 @@
     "url": "https://www.imdb.com/title/tt5848272/"
   },
   {
-    "id": 75,
     "title": "Toy Story 4",
     "oscar": 1,
     "rating": 7.7,
-    "nomination-year": 2020,
-    "runtime-min": 100,
+    "nominationYear": 2020,
+    "runtimeMin": 100,
     "year": 2019,
     "votes": 248237,
     "directors": "Josh Cooley",
@@ -975,12 +900,11 @@
     "url": "https://www.imdb.com/title/tt1979376/"
   },
   {
-    "id": 76,
     "title": "How to Train Your Dragon: The Hidden World",
     "oscar": 0,
     "rating": 7.4,
-    "nomination-year": 2020,
-    "runtime-min": 104,
+    "nominationYear": 2020,
+    "runtimeMin": 104,
     "year": 2019,
     "votes": 128276,
     "directors": "Dean DeBlois",
@@ -988,12 +912,11 @@
     "url": "https://www.imdb.com/title/tt2386490/"
   },
   {
-    "id": 77,
     "title": "J'ai perdu mon corps",
     "oscar": 0,
     "rating": 7.5,
-    "nomination-year": 2020,
-    "runtime-min": 81,
+    "nominationYear": 2020,
+    "runtimeMin": 81,
     "year": 2019,
     "votes": 33009,
     "directors": "Jérémy Clapin",
@@ -1001,12 +924,11 @@
     "url": "https://www.imdb.com/title/tt9806192/"
   },
   {
-    "id": 78,
     "title": "Klaus",
     "oscar": 0,
     "rating": 8.1,
-    "nomination-year": 2020,
-    "runtime-min": 96,
+    "nominationYear": 2020,
+    "runtimeMin": 96,
     "year": 2019,
     "votes": 147458,
     "directors": "Carlos Martínez López, Sergio Pablos",
@@ -1014,12 +936,11 @@
     "url": "https://www.imdb.com/title/tt4729430/"
   },
   {
-    "id": 79,
     "title": "Missing Link",
     "oscar": 0,
     "rating": 6.7,
-    "nomination-year": 2020,
-    "runtime-min": 93,
+    "nominationYear": 2020,
+    "runtimeMin": 93,
     "year": 2019,
     "votes": 26106,
     "directors": "Chris Butler",
@@ -1027,12 +948,11 @@
     "url": "https://www.imdb.com/title/tt6348138/"
   },
   {
-    "id": 80,
     "title": "Soul",
     "oscar": 1,
     "rating": 8,
-    "nomination-year": 2021,
-    "runtime-min": 100,
+    "nominationYear": 2021,
+    "runtimeMin": 100,
     "year": 2020,
     "votes": 323895,
     "directors": "Pete Docter, Kemp Powers",
@@ -1040,12 +960,11 @@
     "url": "https://www.imdb.com/title/tt2948372/"
   },
   {
-    "id": 81,
     "title": "Onward",
     "oscar": 0,
     "rating": 7.4,
-    "nomination-year": 2021,
-    "runtime-min": 102,
+    "nominationYear": 2021,
+    "runtimeMin": 102,
     "year": 2020,
     "votes": 147991,
     "directors": "Dan Scanlon",
@@ -1053,12 +972,11 @@
     "url": "https://www.imdb.com/title/tt7146812/"
   },
   {
-    "id": 82,
     "title": "Over the Moon",
     "oscar": 0,
     "rating": 6.3,
-    "nomination-year": 2021,
-    "runtime-min": 95,
+    "nominationYear": 2021,
+    "runtimeMin": 95,
     "year": 2020,
     "votes": 22469,
     "directors": "Glen Keane, John Kahrs",
@@ -1066,12 +984,11 @@
     "url": "https://www.imdb.com/title/tt7488208/"
   },
   {
-    "id": 83,
     "title": "A Shaun the Sheep Movie: Farmageddon",
     "oscar": 0,
     "rating": 6.8,
-    "nomination-year": 2021,
-    "runtime-min": 86,
+    "nominationYear": 2021,
+    "runtimeMin": 86,
     "year": 2019,
     "votes": 13834,
     "directors": "Will Becher, Richard Phelan",
@@ -1079,12 +996,11 @@
     "url": "https://www.imdb.com/title/tt6193408/"
   },
   {
-    "id": 84,
     "title": "WolfWalkers",
     "oscar": 0,
     "rating": 8,
-    "nomination-year": 2021,
-    "runtime-min": 103,
+    "nominationYear": 2021,
+    "runtimeMin": 103,
     "year": 2020,
     "votes": 32110,
     "directors": "Ross Stewart, Tomm Moore",
@@ -1092,12 +1008,11 @@
     "url": "https://www.imdb.com/title/tt5198068/"
   },
   {
-    "id": 85,
     "title": "Encanto",
     "oscar": 1,
     "rating": 7.2,
-    "nomination-year": 2022,
-    "runtime-min": 102,
+    "nominationYear": 2022,
+    "runtimeMin": 102,
     "year": 2021,
     "votes": 215352,
     "directors": "Jared Bush, Byron Howard, Charise Castro Smith",
@@ -1105,12 +1020,11 @@
     "url": "https://www.imdb.com/title/tt2953050/"
   },
   {
-    "id": 86,
     "title": "Flugt",
     "oscar": 0,
     "rating": 7.9,
-    "nomination-year": 2022,
-    "runtime-min": 89,
+    "nominationYear": 2022,
+    "runtimeMin": 89,
     "year": 2021,
     "votes": 16166,
     "directors": "Jonas Poher Rasmussen",
@@ -1118,12 +1032,11 @@
     "url": "https://www.imdb.com/title/tt8430054/"
   },
   {
-    "id": 87,
     "title": "Luca",
     "oscar": 0,
     "rating": 7.4,
-    "nomination-year": 2022,
-    "runtime-min": 95,
+    "nominationYear": 2022,
+    "runtimeMin": 95,
     "year": 2021,
     "votes": 160026,
     "directors": "Enrico Casarosa",
@@ -1131,12 +1044,11 @@
     "url": "https://www.imdb.com/title/tt12801262/"
   },
   {
-    "id": 88,
     "title": "The Mitchells vs the Machines",
     "oscar": 0,
     "rating": 7.6,
-    "nomination-year": 2022,
-    "runtime-min": 114,
+    "nominationYear": 2022,
+    "runtimeMin": 114,
     "year": 2021,
     "votes": 107144,
     "directors": "Michael Rianda, Jeff Rowe",
@@ -1144,12 +1056,11 @@
     "url": "https://www.imdb.com/title/tt7979580/"
   },
   {
-    "id": 89,
     "title": "Raya and the Last Dragon",
     "oscar": 0,
     "rating": 7.3,
-    "nomination-year": 2022,
-    "runtime-min": 107,
+    "nominationYear": 2022,
+    "runtimeMin": 107,
     "year": 2021,
     "votes": 149543,
     "directors": "Paul Briggs, Don Hall, Carlos López Estrada, John Ripa",
