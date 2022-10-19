@@ -53,14 +53,6 @@ fetch('moviedata.json')
     // console.log(yearGroup);
 
 
-  //Ajout barres de données
-  // grp
-  // .append("rect")
-  // .attr("transform",`translate(${margin.left},0)`)
-  // .datum(data)
-  // .style("fill", "lightblue")
-  // .attr("width", d.rating - 5.5)
-  // .attr("height", )
     //Création du chart à vue générale
     //------Création du svg dans la div, viewbox pour responsive
     const svg = d3
@@ -120,43 +112,34 @@ fetch('moviedata.json')
       .append("g")
       .call(d3.axisLeft(yScale));
 
-
-
-    //Ajout barres de données
-    // grp
-    //   .selectAll("rect")
-    //   .data(data)
-    //   .enter()
-    //   .append("rect")
-    //   .attr("transform",`translate(${margin.left},0)`)
-    //   .style("fill", "lightblue")
-    //   .attr("x", d => xScale(d.year))
-    //   .attr("width", xScale.bandwidth())
-    //   .attr("y", d => yScale(d.rating))
-    //   .attr("height", d => height - yScale(d.rating));
-
     const div = d3
       .select("body")
       .append("div")
       .attr("class", "chart-tooltip")
       .style("opacity", 0);
 
-    grp.selectAll(".bar")
+    grp.selectAll(".barre")
       .data(oscarGroup)
       .enter()
       .append("rect")
+      .attr("class", "barre")
       .attr("transform", `translate(${margin.left},0)`)
       .attr("fill", d => d.studio.color)
-      .attr("class", "bar")
       .attr("x", d => xScale(d.year))
       .attr("width", xScale.bandwidth())
       .attr("y", d => yScale(d.rating))
       .attr("height", d => height - yScale(d.rating))
       .on("mouseover", function (e, d) {
+        d3.selectAll(".barre")
+          .style("opacity", 0.7);
+        d3.select(this)
+          .style("opacity", null);
+
         div.transition()
           .duration(200)
           .style("opacity", 0.9);
-        div.html(`Film : ${d.title}<br> Rating : ${d.rating}`)
+        div.html(`<span class="tooltip-film">${d.title}</span><br>Studio : ${d.studio.name}<br>Rating : ${d.rating}`)
+          .style("position","absolute")
           .style("left", (e.pageX + 10) + "px")
           .style("top", (e.pageY - 50) + "px");
       })
@@ -164,6 +147,9 @@ fetch('moviedata.json')
         div.transition()
           .duration(500)
           .style("opacity", 0);
+
+        d3.selectAll(".barre")
+          .style("opacity", null);
       })
       .on("click", function(e, d){
 
@@ -189,6 +175,19 @@ fetch('moviedata.json')
     //     .attr("stroke-linecap", "round")
     //     .attr("stroke-width", strokeWidth)
     //     .attr("d", area);
+
+     //Ajout barres de données
+    // grp
+    //   .selectAll("rect")
+    //   .data(data)
+    //   .enter()
+    //   .append("rect")
+    //   .attr("transform",`translate(${margin.left},0)`)
+    //   .style("fill", "lightblue")
+    //   .attr("x", d => xScale(d.year))
+    //   .attr("width", xScale.bandwidth())
+    //   .attr("y", d => yScale(d.rating))
+    //   .attr("height", d => height - yScale(d.rating));
 
 
   })
