@@ -32,10 +32,12 @@ body {
     font-weight: bold;
 }
 
-.podium {
-    background-color: aquamarine;
+#podium {
+    margin: 30vh auto 30vh auto;
     width: 50%;
-    height: 30vh;
+    height: 80vh;
+    background-color: aquamarine;
+    
 }
 
 
