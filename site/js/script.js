@@ -88,13 +88,13 @@ fetch('moviedata.json')
     
 
   //Ajout barres de données
-  grp
-  .append("rect")
-  .attr("transform",`translate(${margin.left},0)`)
-  .datum(data)
-  .style("fill", "lightblue")
-  .attr("width", d.rating - 5.5)
-  .attr("height", )
+  // grp
+  // .append("rect")
+  // .attr("transform",`translate(${margin.left},0)`)
+  // .datum(data)
+  // .style("fill", "lightblue")
+  // .attr("width", d.rating - 5.5)
+  // .attr("height", )
 
     //PARTIE HS POUR UN CHART AREA
 //   const area = d3
