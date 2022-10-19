@@ -32,4 +32,10 @@ body {
     font-weight: bold;
 }
 
+.podium {
+    background-color: aquamarine;
+    width: 50%;
+    height: 30vh;
+}
+
 

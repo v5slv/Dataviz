@@ -152,8 +152,10 @@ fetch('moviedata.json')
           .style("opacity", null);
       })
       .on("click", function(e, d){
-
+        d3.select(".podium").scrollIntoView()
       });
+
+      
 
     console.log(yScale(7))
 
