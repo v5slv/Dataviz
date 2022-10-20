@@ -7,16 +7,6 @@ fetch('moviedata.json')
     let annees = [...new Set(moviedata.map(movie => movie.nominationYear))];
     console.log(annees);
 
-    //------Fonction de couleur random à attribuer à chaque studio
-    // function RandomColor() {
-    //   var letters = '0123456789ABCDEF';
-    //   var color = '#';
-    //   for (var i = 0; i < 6; i++) {
-    //     color += letters[Math.floor(Math.random() * 16)];
-    //   }
-    //   return color;
-    // }
-
     //------Collecte des studios et attribution de leurs couleurs
     let studios = [...new Set(moviedata.map(movie => movie.studio))];
     let datastudios = [];
@@ -45,22 +35,9 @@ fetch('moviedata.json')
     );
     console.log(oscarGroup);
 
-    // let yearGroup = [];
-    // let yearpush = new Object(annees.map(a => yearGroup.push({
-    //   'year': a,
-    //   'film': oscarGroup.filter(o => o.year == a)
-    // })));
-    // console.log(yearGroup);
+    let oscarStudios = [...new Set(oscarGroup.map(o => o.studio))];
+    console.log(oscarStudios);
 
-
-  //Ajout barres de données
-  // grp
-  // .append("rect")
-  // .attr("transform",`translate(${margin.left},0)`)
-  // .datum(data)
-  // .style("fill", "lightblue")
-  // .attr("width", d.rating - 5.5)
-  // .attr("height", )
     //Création du chart à vue générale
     //------Création du svg dans la div, viewbox pour responsive
     const svg = d3
@@ -90,7 +67,7 @@ fetch('moviedata.json')
       .append("g")
       .attr("transform", `translate(-${margin.left},-${margin.top})`);
 
-    //Ajout des échelles des axes
+    //------Ajout des échelles des axes
     const yScale = d3
       .scaleLinear()
       .range([height, 0])
@@ -102,61 +79,50 @@ fetch('moviedata.json')
       .domain(annees)
       .padding(0.2);
 
-    //Ajout d'une sous-échelle pour mettre plusieurs barres par année
-    // const xSubScale = d3
-    //   .scaleBand()
-    //   .domain(subgroups)
-    //   .range([0, x.bandwidth()])
-    //   .padding([0.05])
-
-    //Ajout de l'axe x
+    //------Ajout de l'axe x
     chart
       .append("g")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(xScale).ticks(annees.length).tickFormat(d3.format("d")));
 
-    //Ajout de l'axe y
+    //------Ajout de l'axe y
     chart
       .append("g")
       .call(d3.axisLeft(yScale));
 
-
-
-    //Ajout barres de données
-    // grp
-    //   .selectAll("rect")
-    //   .data(data)
-    //   .enter()
-    //   .append("rect")
-    //   .attr("transform",`translate(${margin.left},0)`)
-    //   .style("fill", "lightblue")
-    //   .attr("x", d => xScale(d.year))
-    //   .attr("width", xScale.bandwidth())
-    //   .attr("y", d => yScale(d.rating))
-    //   .attr("height", d => height - yScale(d.rating));
-
+    //------Ajout d'un encadré détails du film au survol d'une barre
     const div = d3
       .select("body")
       .append("div")
       .attr("class", "chart-tooltip")
       .style("opacity", 0);
-
-    grp.selectAll(".bar")
+    
+    //------Ajout des barres (films oscarisés)
+    grp.selectAll(".barre")
       .data(oscarGroup)
       .enter()
       .append("rect")
+      .attr("class", "barre")
       .attr("transform", `translate(${margin.left},0)`)
       .attr("fill", d => d.studio.color)
-      .attr("class", "bar")
       .attr("x", d => xScale(d.year))
       .attr("width", xScale.bandwidth())
       .attr("y", d => yScale(d.rating))
       .attr("height", d => height - yScale(d.rating))
+
+      //------Ajout des events au survol et clic
       .on("mouseover", function (e, d) {
+        d3.selectAll(".barre")
+          .style("opacity", 0.7);
+        d3.select(this)
+          .style("opacity", null)
+          .style("cursor", "pointer");
+
         div.transition()
           .duration(200)
           .style("opacity", 0.9);
-        div.html(`Film : ${d.title}<br> Rating : ${d.rating}`)
+        div.html(`<span class="tooltip-film">${d.title}</span><br>Studio : ${d.studio.name}<br>Rating : ${d.rating}`)
+          .style("position","absolute")
           .style("left", (e.pageX + 10) + "px")
           .style("top", (e.pageY - 50) + "px");
       })
@@ -164,12 +130,14 @@ fetch('moviedata.json')
         div.transition()
           .duration(500)
           .style("opacity", 0);
+
+        d3.selectAll(".barre")
+          .style("opacity", null);
       })
-      .on("click", function(e, d){
-
+      .on("click", function(){
+        console.log("coucou");
+        document.getElementById("podium").scrollIntoView({behavior:"smooth", block: "center"});
       });
-
-    console.log(yScale(7))
 
     //PARTIE HS POUR UN CHART AREA
     //   const area = d3
@@ -190,5 +158,41 @@ fetch('moviedata.json')
     //     .attr("stroke-width", strokeWidth)
     //     .attr("d", area);
 
+     //Ajout barres de données
+    // grp
+    //   .selectAll("rect")
+    //   .data(data)
+    //   .enter()
+    //   .append("rect")
+    //   .attr("transform",`translate(${margin.left},0)`)
+    //   .style("fill", "lightblue")
+    //   .attr("x", d => xScale(d.year))
+    //   .attr("width", xScale.bandwidth())
+    //   .attr("y", d => yScale(d.rating))
+    //   .attr("height", d => height - yScale(d.rating));
 
+    //Ajout d'une sous-échelle pour mettre plusieurs barres par année
+    // const xSubScale = d3
+    //   .scaleBand()
+    //   .domain(subgroups)
+    //   .range([0, x.bandwidth()])
+    //   .padding([0.05])
+
+    // let yearGroup = [];
+    // let yearpush = new Object(annees.map(a => yearGroup.push({
+    //   'year': a,
+    //   'film': oscarGroup.filter(o => o.year == a)
+    // })));
+    // console.log(yearGroup);
+
+
+    //------Fonction de couleur random à attribuer à chaque studio
+    // function RandomColor() {
+    //   var letters = '0123456789ABCDEF';
+    //   var color = '#';
+    //   for (var i = 0; i < 6; i++) {
+    //     color += letters[Math.floor(Math.random() * 16)];
+    //   }
+    //   return color;
+    // }
   })
