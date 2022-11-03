@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mukta:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="js/d3.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="js/script.js" defer></script>
@@ -14,7 +17,20 @@
     <script src="js/pie.js" defer></script>
 </head>
 <body>
-    <div id="chart"></div>
+    <div class="accroche">
+        <h1>"And the oscar for <span>Best animated feature</span> goes to..."</h1>
+    </div>
+
+
+    <div class="vueglob">
+        <div class="flex-vueglob">
+            <div id="chart"></div>
+            <div id="leg"></div>
+        </div>
+        <h1 class="titlechart">Oscar Best animated feature winners ratings</h1>
+        <h2>And their studios !</h2>
+        <p>Here are all the oscar-winning animated films ever. As you can see, Pixar is the studio that has the highest number of winners among all of the other ones. However, the best ranking goes to Spirited Away, a great movie by Studio Ghibli, with a rating of 8.6 ! It is the only movie on the list to have a rating over 8 on IMDB, which is remarkable. On the other hand, Happy Feet obtains a rating of only 6.4...</p>
+    </div>
 
     <div class="chartBox">
         <canvas id="myChart"></canvas>
@@ -23,7 +39,7 @@
     <div id="podium"></div>
 
     <div class="audio">
-        <audio autoplay></audio>
+        <audio autoplay loop></audio>
     </div>
     
 </body>

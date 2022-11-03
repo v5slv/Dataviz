@@ -11,7 +11,8 @@ fetch('moviedata.json')
     let studios = [...new Set(moviedata.map(movie => movie.studio))];
     let datastudios = [];
 
-    let colorSet = d3.scaleOrdinal().domain(studios).range(d3.schemeSet3);
+  
+    let colorSet = d3.scaleOrdinal().domain(studios).range(d3.schemeRdGy[9]);
     let colorpush = new Object(studios.map(c => datastudios.push({
       'name': c,
       'color': colorSet(c)
@@ -50,7 +51,6 @@ fetch('moviedata.json')
       .attr("viewBox", "0 -10 600 310");
 
     //------Paramètres des margin
-    const strokeWidth = 1;
     const margin = {
       top: 0,
       bottom: 20,
@@ -87,12 +87,14 @@ fetch('moviedata.json')
     chart
       .append("g")
       .attr("transform", `translate(0,${height})`)
-      .call(d3.axisBottom(xScale).ticks(annees.length).tickFormat(d3.format("d")));
+      .call(d3.axisBottom(xScale).ticks(annees.length).tickFormat(d3.format("d")))
+      .style("stroke-width", 2);
 
     //------Ajout de l'axe y
     chart
       .append("g")
-      .call(d3.axisLeft(yScale));
+      .call(d3.axisLeft(yScale).ticks(6))
+      .style("stroke-width", 2);
 
     //------Ajout d'un encadré détails du film au survol d'une barre
     const div = d3
@@ -113,12 +115,17 @@ fetch('moviedata.json')
       .attr("width", xScale.bandwidth())
       .attr("y", d => yScale(d.rating))
       .attr("height", d => height - yScale(d.rating))
+      // .append("img")
+      // .attr("src", `ost/${d.year}.mp3`)
+      
 
       //------Ajout des events au survol et clic (opacité, détails, scroll sur le deuxième chart, musique)
       .on("mouseover", function (e, d) {
-        d3.selectAll(".barre")
-          .style("opacity", 0.6);
-        d3.select(this)
+        d3.selectAll(".barre").transition()
+        .duration(200)
+          .style("opacity", 0.2);
+        d3.select(this).transition()
+        .duration(200)
           .style("opacity", null)
           .style("cursor", "pointer");
 
@@ -134,6 +141,10 @@ fetch('moviedata.json')
         div.transition()
           .duration(500)
           .style("opacity", 0);
+
+          d3.selectAll(".barre").transition()
+          .duration(200)
+          .style("opacity", null);
       })
       .on("click", function (e, d) {
         document.getElementById("podium").scrollIntoView({
@@ -141,14 +152,42 @@ fetch('moviedata.json')
           block: "center"
         });
 
-      d3.selectAll("audio")
-      .attr("src", `ost/${d.year}.mp3`)
+        d3.selectAll("audio")
+          .attr("src", `ost/${d.year}.mp3`)
       });
 
-    d3.select("#chart")
-      .append("h1")
-      .attr("class", "titlechart")
-      .html("Oscar Best animated feature winners ratings");
+
+
+
+
+    // Add one dot in the legend for each name.
+
+    let legende = d3.select("#leg")
+    .append("svg")
+    .attr("viewBox", "0 0 250 195");
+
+    legende.selectAll("mydots")
+      .data(oscarStudios)
+      .enter()
+      .append("circle")
+      .attr("cx", 8)
+      .attr("cy", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
+      .attr("r", 8)
+      .style("fill", d => d.color)
+
+    // Add one dot in the legend for each name.
+
+      legende.selectAll("labels")
+      .data(oscarStudios)
+      .enter()
+      .append("text")
+      .attr("x", 32)
+      .attr("y", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
+      .text(d => d.name)
+      .attr("text-anchor", "left")
+      .style("alignment-baseline", "middle")
+      .style("fill", "#eeeeee")
+
 
 
     //PARTIE HS POUR UN CHART AREA
