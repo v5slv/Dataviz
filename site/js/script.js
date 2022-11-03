@@ -48,7 +48,7 @@ fetch('moviedata.json')
     const svg = d3
       .select("#chart")
       .append("svg")
-      .attr("viewBox", "0 -10 600 310");
+      .attr("viewBox", "0 -10 600 320");
 
     //------Paramètres des margin
     const margin = {
@@ -88,7 +88,10 @@ fetch('moviedata.json')
       .append("g")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(xScale).ticks(annees.length).tickFormat(d3.format("d")))
-      .style("stroke-width", 2);
+      .style("stroke-width", 2)
+      .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
 
     //------Ajout de l'axe y
     chart
@@ -103,10 +106,14 @@ fetch('moviedata.json')
       .attr("class", "chart-tooltip")
       .style("opacity", 0);
 
+      
     //------Ajout des barres (films oscarisés)
-    grp.selectAll(".barre")
+    
+    grp.selectAll(".subgroup")
       .data(oscarGroup)
       .enter()
+      .append("g")
+      .attr("class", "subgroup")
       .append("rect")
       .attr("class", "barre")
       .attr("transform", `translate(${margin.left},0)`)
@@ -114,18 +121,50 @@ fetch('moviedata.json')
       .attr("x", d => xScale(d.year))
       .attr("width", xScale.bandwidth())
       .attr("y", d => yScale(d.rating))
-      .attr("height", d => height - yScale(d.rating))
+      .attr("height", d => height - yScale(d.rating));
+
+    grp.selectAll(".subgroup")
+      .append("circle")
+      .attr("class", "circle")
+      .attr("transform", `translate(${margin.left+10},0)`)
+      .attr("cx",  d => xScale(d.year))
+      .attr("cy", d => yScale(d.rating))
+      .attr("r", 13)
+      .style("fill", d => `url(#${d.year})`)
+      .attr("stroke", d => d.studio.color);
+
+    svg.append("defs").selectAll("pattern")
+      .data(oscarGroup)
+      .enter()
+      .append("pattern")
+      .attr("id", d => d.year)
+      .attr("patternContentUnits", "objectBoundingBox")
+      .attr("viewBox", "0 0 1 1")
+      .attr("height", "100%")
+      .attr("width", "100%")
+      .append("image")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("height", "1")
+      .attr("width", "1")
+      .attr("xlink:href",  d => `img/${d.year}.png`)
+    
+
+   
       // .append("img")
       // .attr("src", `ost/${d.year}.mp3`)
       
 
       //------Ajout des events au survol et clic (opacité, détails, scroll sur le deuxième chart, musique)
-      .on("mouseover", function (e, d) {
-        d3.selectAll(".barre").transition()
-        .duration(200)
+    grp.selectAll(".subgroup").on("mouseover", function (e, d) {
+        d3.selectAll(".subgroup")
+          .transition()
+          .duration(200)
           .style("opacity", 0.2);
-        d3.select(this).transition()
-        .duration(200)
+
+        d3.select(this)
+          .transition()
+          .duration(200)
           .style("opacity", null)
           .style("cursor", "pointer");
 
@@ -142,7 +181,7 @@ fetch('moviedata.json')
           .duration(500)
           .style("opacity", 0);
 
-          d3.selectAll(".barre").transition()
+          d3.selectAll(".subgroup").transition()
           .duration(200)
           .style("opacity", null);
       })
