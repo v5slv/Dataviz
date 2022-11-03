@@ -30,15 +30,13 @@ fetch('moviedata.json')
     console.log(data);
 
 
-    let obj1 = Object.assign({}, annees);
-    console.log(obj1)
-    let films = [];
-    let zoompush = new Object(annees.map(a => films.push({
+    let parAnnee = [];
+    let zoompush = new Object(annees.map(a => parAnnee.push({
         'year' : a,
-        'films': data.filter(movie => movie.nominationYear == a)[0]
+        'films': data.filter(movie => movie.year == a)
     })))
-    console.log(films)
-
+    console.log(parAnnee)
+    
     
 
 
