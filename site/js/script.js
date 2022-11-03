@@ -25,7 +25,7 @@ fetch('moviedata.json')
       'year': movie.nominationYear,
       'rating': movie.rating,
       'oscar': movie.oscar,
-      'studio' : datastudios.filter(studio => studio.name == movie.studio)[0]
+      'studio': datastudios.filter(studio => studio.name == movie.studio)[0]
     })));
     console.log(data);
 
@@ -38,7 +38,11 @@ fetch('moviedata.json')
     let oscarStudios = [...new Set(oscarGroup.map(o => o.studio))];
     console.log(oscarStudios);
 
-    //Création du chart à vue générale
+
+
+
+    //Création du chart à vue générale----------------------------------------------------------------------------------------
+
     //------Création du svg dans la div, viewbox pour responsive
     const svg = d3
       .select("#chart")
@@ -96,7 +100,7 @@ fetch('moviedata.json')
       .append("div")
       .attr("class", "chart-tooltip")
       .style("opacity", 0);
-    
+
     //------Ajout des barres (films oscarisés)
     grp.selectAll(".barre")
       .data(oscarGroup)
@@ -110,10 +114,10 @@ fetch('moviedata.json')
       .attr("y", d => yScale(d.rating))
       .attr("height", d => height - yScale(d.rating))
 
-      //------Ajout des events au survol et clic
+      //------Ajout des events au survol et clic (opacité, détails, scroll sur le deuxième chart, musique)
       .on("mouseover", function (e, d) {
         d3.selectAll(".barre")
-          .style("opacity", 0.7);
+          .style("opacity", 0.6);
         d3.select(this)
           .style("opacity", null)
           .style("cursor", "pointer");
@@ -122,7 +126,7 @@ fetch('moviedata.json')
           .duration(200)
           .style("opacity", 0.9);
         div.html(`<span class="tooltip-film">${d.title}</span><br>Studio : ${d.studio.name}<br>Rating : ${d.rating}`)
-          .style("position","absolute")
+          .style("position", "absolute")
           .style("left", (e.pageX + 10) + "px")
           .style("top", (e.pageY - 50) + "px");
       })
@@ -130,14 +134,22 @@ fetch('moviedata.json')
         div.transition()
           .duration(500)
           .style("opacity", 0);
-
-        d3.selectAll(".barre")
-          .style("opacity", null);
       })
-      .on("click", function(){
-        console.log("coucou");
-        document.getElementById("podium").scrollIntoView({behavior:"smooth", block: "center"});
+      .on("click", function (e, d) {
+        document.getElementById("podium").scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      d3.selectAll("audio")
+      .attr("src", `ost/${d.year}.mp3`)
       });
+
+    d3.select("#chart")
+      .append("h1")
+      .attr("class", "titlechart")
+      .html("Oscar Best animated feature winners ratings");
+
 
     //PARTIE HS POUR UN CHART AREA
     //   const area = d3
@@ -158,7 +170,7 @@ fetch('moviedata.json')
     //     .attr("stroke-width", strokeWidth)
     //     .attr("d", area);
 
-     //Ajout barres de données
+    //Ajout barres de données
     // grp
     //   .selectAll("rect")
     //   .data(data)

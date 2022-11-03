@@ -36,12 +36,17 @@ body {
     font-weight: bold;
 }
 
-#podium {
-    margin: 30vh auto 30vh auto;
-    width: 50%;
-    height: 80vh;
-    background-color: aquamarine;
-    
+.titlechart {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
 }
 
+/* #podium {
+    margin: 30vh auto 30vh auto;
+    width: 50%;
+    height: 30vh;
+    background-color: aquamarine;
+}
+ */
 
