@@ -13,9 +13,10 @@ fetch('moviedata.json')
 
   
     let colorSet = d3.scaleOrdinal().domain(studios).range(d3.schemeRdGy[9]);
-    let colorpush = new Object(studios.map(c => datastudios.push({
+    let colorpush = new Object(studios.map((c,i) => datastudios.push({
       'name': c,
-      'color': colorSet(c)
+      'color': colorSet(c),
+      'id': i
     })));
     console.log(datastudios);
 
@@ -107,13 +108,13 @@ fetch('moviedata.json')
       .style("opacity", 0);
 
       
-    //------Ajout des barres (films oscarisés)
+    //------Ajout des sous-groupes du chart contenant les barres et leurs icônes
     
     grp.selectAll(".subgroup")
       .data(oscarGroup)
       .enter()
       .append("g")
-      .attr("class", "subgroup")
+      .attr("class", d => `subgroup studio${d.studio.id}`)
       .append("rect")
       .attr("class", "barre")
       .attr("transform", `translate(${margin.left},0)`)
@@ -123,6 +124,7 @@ fetch('moviedata.json')
       .attr("y", d => yScale(d.rating))
       .attr("height", d => height - yScale(d.rating));
 
+    //------Ajout des icônes de films au-dessus de leurs barres (cercle svg avec image en motif)
     grp.selectAll(".subgroup")
       .append("circle")
       .attr("class", "circle")
@@ -148,16 +150,43 @@ fetch('moviedata.json')
       .attr("height", "1")
       .attr("width", "1")
       .attr("xlink:href",  d => `img/${d.year}.png`)
-    
 
-   
-      // .append("img")
-      // .attr("src", `ost/${d.year}.mp3`)
-      
+    //Création de la légende couleur = studio
+    let legende = d3.select("#leg")
+    .append("svg")
+    .attr("viewBox", "0 0 250 195");
 
-      //------Ajout des events au survol et clic (opacité, détails, scroll sur le deuxième chart, musique)
-    grp.selectAll(".subgroup").on("mouseover", function (e, d) {
+    //------Ajout des groupes contenant un point de couleur et le studio associé
+    legende.selectAll("g")
+      .data(oscarStudios)
+      .enter()
+      .append("g")
+      .attr("class", d => "studio"+d.id)
+      .append("circle")
+      .attr("cx", 8)
+      .attr("cy", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
+      .attr("r", 8)
+      .style("fill", d => d.color);
+
+    legende.selectAll("g")
+      .append("text")
+      .attr("x", 30)
+      .attr("y", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
+      .text(d => d.name)
+      .attr("text-anchor", "left")
+      .style("alignment-baseline", "middle")
+      .style("fill", "#eeeeee");
+
+
+    //------Ajout des events au survol et clic (opacité, détails, scroll sur le deuxième chart, musique)
+    grp.selectAll(".subgroup")
+      .on("mouseover", function (e, d) {
         d3.selectAll(".subgroup")
+          .transition()
+          .duration(200)
+          .style("opacity", 0.2);
+
+        legende.selectAll("g")
           .transition()
           .duration(200)
           .style("opacity", 0.2);
@@ -168,6 +197,11 @@ fetch('moviedata.json')
           .style("opacity", null)
           .style("cursor", "pointer");
 
+        legende.select(`.${this.classList[1]}`)
+          .transition()
+          .duration(200)
+          .style("opacity", null);
+  
         div.transition()
           .duration(200)
           .style("opacity", 0.9);
@@ -184,6 +218,11 @@ fetch('moviedata.json')
           d3.selectAll(".subgroup").transition()
           .duration(200)
           .style("opacity", null);
+
+          legende.selectAll("g")
+          .transition()
+          .duration(200)
+          .style("opacity", null);
       })
       .on("click", function (e, d) {
         document.getElementById("podium").scrollIntoView({
@@ -196,38 +235,40 @@ fetch('moviedata.json')
       });
 
 
+    legende.selectAll("g")
+      .on("mouseover", function (e, d) {
+        legende.selectAll("g")
+          .transition()
+          .duration(200)
+          .style("opacity", 0.2)
+          .style("cursor", "default");
 
+        d3.selectAll(".subgroup")
+          .transition()
+          .duration(200)
+          .style("opacity", 0.2);
 
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .style("opacity", null);
 
-    // Add one dot in the legend for each name.
-
-    let legende = d3.select("#leg")
-    .append("svg")
-    .attr("viewBox", "0 0 250 195");
-
-    legende.selectAll("mydots")
-      .data(oscarStudios)
-      .enter()
-      .append("circle")
-      .attr("cx", 8)
-      .attr("cy", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
-      .attr("r", 8)
-      .style("fill", d => d.color)
-
-    // Add one dot in the legend for each name.
-
-      legende.selectAll("labels")
-      .data(oscarStudios)
-      .enter()
-      .append("text")
-      .attr("x", 32)
-      .attr("y", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
-      .text(d => d.name)
-      .attr("text-anchor", "left")
-      .style("alignment-baseline", "middle")
-      .style("fill", "#eeeeee")
-
-
+        d3.selectAll(`.${this.classList}`)
+          .transition()
+          .duration(200)
+          .style("opacity", null);
+        console.log(`.${this.classList}`)
+      })
+      .on("mouseout", function (e, d) {
+          d3.selectAll(".subgroup")
+          .transition()
+          .duration(200)
+          .style("opacity", null);
+          legende.selectAll("g")
+          .transition()
+          .duration(200)
+          .style("opacity", null);
+      })
 
     //PARTIE HS POUR UN CHART AREA
     //   const area = d3
