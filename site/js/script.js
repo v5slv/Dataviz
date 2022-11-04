@@ -230,8 +230,11 @@ fetch('moviedata.json')
           block: "center"
         });
 
-        d3.selectAll("audio")
-          .attr("src", `ost/${d.year}.mp3`)
+        d3.select("audio")
+          .attr("src", `ost/${d.year}.mp3`);
+
+        d3.select(".audio-title")
+        .html(d.title)
       });
 
 
