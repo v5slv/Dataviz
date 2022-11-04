@@ -36,6 +36,15 @@ fetch('moviedata.json')
         'films': data.filter(movie => movie.year == a)
     })))
     console.log(parAnnee)
+
+    // let groupByYear = data.reduce((group, films) => {
+    //   const { year } = films;
+    //   group[year] = group[year] ?? [];
+    //   group[year].push(films);
+    //   return group;
+    // }, {});
+    // console.log(groupByYear);
+
     
     
 
