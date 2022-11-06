@@ -237,8 +237,7 @@ fetch('moviedata.json')
           block: "center"
         });
 
-        const f = document.querySelector("#suite div");
-        f.className = "film" + d.year;
+        const f = document.querySelector("film-container");
 
         let sameNom = data.filter(movie =>
           movie.year == d.year
@@ -246,17 +245,40 @@ fetch('moviedata.json')
         console.log(sameNom);
 
         d3.select(f)
-        .selectAll("p").remove()
+        .selectAll(".tempo").remove();
 
-        d3.select(f)
+        d3.select(".winner-text")
+        .selectAll(".tempo")
+        .data(sameNom)
+        .enter()
+        .filter(d => d.oscar ==1)
+        .append("p")
+        .attr("class", "tempo o1")
+        .html(d => `${d.title}<br>${d.year} winning film`);
+
+        d3.select(".nom-container")
+        .append("p")
+        .html("Other nominated films the same year :");
+        
+        d3.select(".nom-container")
         .selectAll("p")
         .data(sameNom)
         .enter()
+        .filter(d => d.oscar == 0)
         .append("p")
-        .attr("class", d => `o${d.oscar}`)
-        .html(d => `${d.title}`)
-     
+        .attr("class", "tempo")
+        .html(d => d.title);
+
+
+
+        // d3.select("winner-container")
+        // .append("p", ":first-child")
+        // .html(d => "autres films nominés en " + d.year);
+       
         
+        d3.select(".icone-film")
+        .attr("src", `img/${d.year}.png` )
+
         d3.select("audio")
           .attr("src", `ost/${d.year}.mp3`);
 

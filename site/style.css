@@ -141,8 +141,8 @@ text{
 
 #suite {
     margin: 0 auto 30vh auto;
-    width: 50%;
-    height: 30vh;
+    width: 80%;
+    
     display: none;
     justify-content: center;
     align-items: baseline;
@@ -152,6 +152,21 @@ footer {
     padding: 1em;
     background-color: #0e0e0e;
     text-align: center;
+}
+
+.icone-film {
+    width: 40%;
+}
+
+.o1 {
+    font-size: 2em;
+}
+
+.nom-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
