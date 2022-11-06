@@ -64,6 +64,10 @@ text{
 }
 
 
+.oscar-color{
+    color: yellow;
+}
+
 .fleche-bas {
     width: 5%;
     margin-left: 80%;
@@ -105,6 +109,18 @@ text{
   
 .selection {
     fill: none;
+}
+
+.explication-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5em 0 5em;
+}
+
+.titlechart-container{
+    max-width: 50vw;
 }
 
 .tick {
