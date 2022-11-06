@@ -7,22 +7,17 @@ fetch('moviedata.json')
     let annees = [...new Set(moviedata.map(movie => movie.nominationYear))];
     console.log(annees);
 
-    //------Collecte des studios et attribution de leurs couleurs
+    //------Collecte des studios
     let studios = [...new Set(moviedata.map(movie => movie.studio))];
     let datastudios = [];
-
-  
-    let colorSet = d3.scaleOrdinal().domain(studios).range(d3.schemeRdGy[9]);
-    let colorpush = new Object(studios.map((c,i) => datastudios.push({
+    let spush = new Object(studios.map((c,i) => datastudios.push({
       'name': c,
-      'color': colorSet(c),
       'id': i
-    })));
-    console.log(datastudios);
+    })))
 
     //------Collecte des films et leurs données
     let data = [];
-    let filmpush = new Object(moviedata.map(movie => data.push({
+    let filmpush = new Object(moviedata.map((movie, i) => data.push({
       'title': movie.title,
       'year': movie.nominationYear,
       'rating': movie.rating,
@@ -40,6 +35,12 @@ fetch('moviedata.json')
     let oscarStudios = [...new Set(oscarGroup.map(o => o.studio))];
     console.log(oscarStudios);
 
+    let colors = ["8A0B12", "F7DCCA", "E8A888", "878787", "CB7A00", "9FAE42", "F2F2F2", "00604E"]
+    oscarStudios.forEach((s,i) => {
+      s.color = "#" + colors[i];
+    });
+    console.log(datastudios)
+
 
 
 
@@ -49,7 +50,7 @@ fetch('moviedata.json')
     const svg = d3
       .select("#chart")
       .append("svg")
-      .attr("viewBox", "0 -10 600 320");
+      .attr("viewBox", "0 -20 590 330");
 
     //------Paramètres des margin
     const margin = {
@@ -94,11 +95,17 @@ fetch('moviedata.json')
       .attr("transform", "translate(-10,0)rotate(-45)")
       .style("text-anchor", "end");
 
-    //------Ajout de l'axe y
+    //------Ajout de l'axe y et sa légende
     chart
       .append("g")
       .call(d3.axisLeft(yScale).ticks(6))
-      .style("stroke-width", 2);
+      .style("stroke-width", 2)
+      .append("text")
+      .text("IMDb rating (out of 10)")
+      .attr("x", -20)
+      .attr("y", -10)
+      .style("fill", "#eeeeee")
+      .style("text-anchor", "start");
 
     //------Ajout d'un encadré détails du film au survol d'une barre
     const div = d3
@@ -109,7 +116,6 @@ fetch('moviedata.json')
 
       
     //------Ajout des sous-groupes du chart contenant les barres et leurs icônes
-    
     grp.selectAll(".subgroup")
       .data(oscarGroup)
       .enter()
@@ -134,7 +140,7 @@ fetch('moviedata.json')
       .attr("r", 13)
       .style("fill", d => `url(#${d.year})`)
       .attr("stroke", d => d.studio.color);
-
+      
     svg.append("defs").selectAll("pattern")
       .data(oscarGroup)
       .enter()
@@ -156,7 +162,7 @@ fetch('moviedata.json')
     .append("svg")
     .attr("viewBox", "0 0 250 195");
 
-    //------Ajout des groupes contenant un point de couleur et le studio associé
+    //------Ajout des groupes de la légende : un point de couleur et le studio associé
     legende.selectAll("g")
       .data(oscarStudios)
       .enter()
@@ -225,16 +231,35 @@ fetch('moviedata.json')
           .style("opacity", null);
       })
       .on("click", function (e, d) {
-        document.getElementById("podium").scrollIntoView({
+        document.getElementById("suite").style.display = "flex";
+        document.getElementById("suite").scrollIntoView({
           behavior: "smooth",
           block: "center"
         });
 
+        const f = document.querySelector("#suite div");
+        f.className = "film" + d.year;
+
+        let sameNom = data.filter(movie =>
+          movie.year == d.year
+        );
+        console.log(sameNom);
+
+        d3.select(f)
+        .selectAll("p").remove()
+
+        d3.select(f)
+        .selectAll("p")
+        .data(sameNom)
+        .enter()
+        .append("p")
+        .attr("class", d => `o${d.oscar}`)
+        .html(d => `${d.title}`)
+     
+        
         d3.select("audio")
           .attr("src", `ost/${d.year}.mp3`);
 
-        d3.select(".audio-title")
-        .html(d.title)
       });
 
 
@@ -260,7 +285,6 @@ fetch('moviedata.json')
           .transition()
           .duration(200)
           .style("opacity", null);
-        console.log(`.${this.classList}`)
       })
       .on("mouseout", function (e, d) {
           d3.selectAll(".subgroup")
@@ -272,6 +296,34 @@ fetch('moviedata.json')
           .duration(200)
           .style("opacity", null);
       })
+
+
+      // d3
+      // .select("#suite")
+      // .append("svg")
+      // .attr("viewBox", "0 0 200 200")
+      // .attr("height", 100)
+      // .attr("width", 100)
+      // .append('circle')
+      // .attr('cx', 100)
+      // .attr('cy', 100)
+      // .attr('r', 50)
+      // .attr('stroke', 'black')
+      // .attr('fill', '#69a3b2');
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
     //PARTIE HS POUR UN CHART AREA
     //   const area = d3
