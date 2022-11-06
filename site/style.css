@@ -42,18 +42,23 @@ text{
 .accroche {
     height: 100vh;
     width: 100%;
-    padding: 20vh 10vh;
+    padding: 0 10vh;
     font-size: 2em;
     background: linear-gradient(#0d0000, #170e1a);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .accroche h1 {
     font-size: 7.5vmax;
     transform: skew(-5.7deg) rotate(-5.7deg);
     text-transform: uppercase;
-    padding: 30px;
     color: #ffc400;
-    animation: title 3s 200ms;
+    margin-top: 1.5em;
+    opacity: 0;
+    animation: title 1s 200ms;
     animation-fill-mode: forwards;  
     
 }
@@ -63,29 +68,18 @@ text{
     to   {text-shadow: 0.6vmin 0.6vmin 0 #751a1a, -1vmin -1vmin 0 #42183b;opacity: 1;}
 }
 
-
-.oscar-color{
-    color: yellow;
-}
-
 .fleche-bas {
-    width: 5%;
-    margin-left: 80%;
-    transform: rotate(90deg);
-    /* animation: bounce 0.6s ease-in infinite alternate; */
+    width: 6vmax;
+    animation: bounce 0.6s ease-in infinite alternate;
 }
 
 @keyframes bounce{
-    from {transform: translateX(0px);}
-    to   {transform: translateX(10px);}
-}
-
-.chartBox{
-    width: 400px;
+    from {transform: translateY(0px);}
+    to   {transform: translateY(10px);}
 }
 
 .vueglob {
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     padding-top: 10vh;
 }
 
@@ -154,6 +148,11 @@ text{
     align-items: baseline;
 }
 
+footer {
+    padding: 1em;
+    background-color: #0e0e0e;
+    text-align: center;
+}
 
 
 
