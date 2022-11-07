@@ -204,7 +204,9 @@ text{
 .audio{
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 3rem;
+    margin-top: 2rem;
+
 }
 
 #play_pause, #replay, #loop {
