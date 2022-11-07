@@ -164,22 +164,21 @@ text{
 
 .film-container{
     display: flex;
-}
-
-.winner-container{
-    display: flex;
-    gap: 2em;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .wintitle{
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: 3vmax;
+    font-size: 4vmax;
     text-transform: uppercase;
     color: #ffd859;
     margin: 0;
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
+
+
 
 .film-text-container p{
     transform: skew(-5.7deg) rotate(-5.7deg);
