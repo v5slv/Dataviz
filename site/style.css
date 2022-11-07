@@ -136,6 +136,7 @@ text{
     width: 80%;
     
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: baseline;
 }
@@ -187,13 +188,27 @@ text{
 .nom-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
 .icone-film {
-    max-width: 50%;
-    min-height: 60%;
+    height: 70%;
+    width: 50%;
+    object-fit: contain;
+}
+
+.audio{
+    display: flex;
+    flex-direction: column;
+}
+
+#play_pause {
+    width: 10%;
+    cursor: pointer;
+}
+
+#play_pause img {
+    max-width: 100%;
 }
 
 
