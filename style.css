@@ -56,14 +56,14 @@ text{
     animation-fill-mode: forwards;  
 }
 
-.floating { 
+/* .floating { 
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     margin-left: 30px;
     margin-top: 5px;
-}
+} */
 
 /* @keyframes floating {
     0% { transform: translate(0,  0px); }
@@ -123,6 +123,7 @@ text{
     max-width: 70vw;
 }
 
+
 .tick {
     font-size: 0.5rem;
     font-family: 'Mukta', sans-serif;
@@ -176,7 +177,6 @@ text{
     color: #170e1a;
 }
 
-
 .titlechart{
     font-family: 'Inter', sans-serif;
     font-weight: bold;
@@ -196,6 +196,11 @@ text{
 .other{
     text-transform: uppercase;
     font-size: 1.3rem;
+    background-color: #ffc400;
+    color: #170e1a;
+    width: fit-content;
+    padding: 0.2em 0.5em;
+
 }
 
 .o0{
@@ -213,7 +218,7 @@ text{
 .wintitle{
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: 4vmax;
+    font-size: 5vmax;
     text-transform: uppercase;
     color: #ffc400;
     margin: 0;
@@ -229,27 +234,39 @@ text{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 3em;
+}
+
+.img-audio-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
 }
 
 .icone-film {
-    height: 70%;
-    width: 50%;
+    max-height: 60%;
+    max-width: 60%;
     object-fit: contain;
 }
 
 .audio{
-    max-width: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     gap: 3rem;
-    margin-top: 2rem;
 }
 
-
-#play_pause, #replay, #loop {
-    max-width: 100%;
+.audio div {
     cursor: pointer;
+}
+
+.audio img:not(#volume-btn) {
+    display: block;
+    margin: auto;
+    width: 60%;
 }
 
 .volume-container {
@@ -262,7 +279,6 @@ text{
 
 #volume-btn {
     width: 10%;
-    cursor: pointer;
 }
 
 footer {

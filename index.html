@@ -38,11 +38,15 @@
                 <div class="titlechart-surligne"><p>(and their studios)</p></div>
                 <!-- <div class="clicktoknow-container"><p>Click on each movie to know more !</p></div> -->
             </div>
-            <p class="explication-text">Here are all the oscar-winning animated films ever. As you can see, Pixar is the
-                studio that has the highest number of winners among all of the other ones. However, the best ranking
-                goes to Spirited Away, a great movie by Studio Ghibli, with a rating of 8.6 ! It is the only movie on
-                the list to have a rating over 8.5 on IMDd, which is remarkable. On the other hand, Happy Feet obtains a
-                rating of only 6.4.</p>
+            <div class="explication-bg">
+                <p class="explication-text">
+                    Here are all the oscar-winning animated films ever ! As you can see, Pixar is the
+                    studio that has the highest number of winners among all of the other ones. However, the best ranking
+                    goes to Spirited Away, a great movie by Studio Ghibli, with a rating of 8.6 ! It is the only movie on
+                    the list to have a rating over 8.5 on IMDd, which is remarkable. On the other hand, Happy Feet obtains a
+                    rating of only 6.4.
+                </p>
+            </div>
             
         </div>
     </section>
@@ -54,23 +58,27 @@
 
     <div id="suite">
         <div class="film-container">
-            <img class="icone-film" alt="">
+            <div class="img-audio-flex">
+                <img class="icone-film" alt="">
+                <div class="audio">
+                    <audio autoplay></audio>
+                    <div id="loop"><img src="img/loop.svg" alt="Play or disable music on loop"></div>
+                    <div id="replay"><img src="img/replay.svg" alt="Replay music"></div>
+                    
+                    <div id="play_pause"><img src="img/pause.svg" alt="Play or pause music"></div>
+                    
+                    <div class="volume-container">
+                        <img id="volume-btn" src="img/sound.svg" alt="Mute or unmute music">
+                        <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
+                    </div>
+                   
+                </div>
+            </div>
+
             <div class="film-text-container">
                 <div class="winner-text"></div>
-                <div class="nom-container"><p class="other">Other nominated films the same year :</p></div>
+                <div class="nom-container"><p class="other">Other nominated films this year :</p></div>
             </div>
-        </div>
-        <div class="audio">
-            <audio autoplay></audio>
-            <div id="play_pause"><img src="img/pause.svg" alt="Play or pause music"></div>
-            <div id="replay"><img src="img/replay.svg" alt="Replay music"></div>
-            <div id="loop"><img src="img/loop.svg" alt="Play or disable music on loop"></div>
-            <div class="volume-container">
-                <img id="volume-btn" src="img/sound.svg" alt="Mute or unmute music">
-                <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
-            </div>
-            
-           
         </div>
     </div>
 
