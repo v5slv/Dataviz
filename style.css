@@ -212,11 +212,18 @@ text{
 }
 
 
-
 footer {
     padding: 1em;
     background-color: #0e0e0e;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+footer img {
+    width: 5em;
 }
 
 
