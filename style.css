@@ -211,7 +211,7 @@ text{
 .wintitle{
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: 5vmax;
+    font-size: 5.5vmax;
     text-transform: uppercase;
     color: #ffc400;
     margin: 0;
@@ -252,6 +252,7 @@ text{
 }
 
 .img-audio-flex {
+    min-width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;

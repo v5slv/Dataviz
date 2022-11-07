@@ -1,9 +1,9 @@
-//Récupération des données du json
+// Récupération des données du json
 fetch('moviedata.json')
   .then((response) => response.json())
   .then(function (moviedata) {
 
-    //Collecte des données à utiliser
+    // Collecte des données à utiliser
     let annees = [...new Set(moviedata.map(movie => movie.nominationYear))];
     console.log(annees);
 
@@ -33,18 +33,15 @@ fetch('moviedata.json')
     console.log(oscarGroup);
 
     let oscarStudios = [...new Set(oscarGroup.map(o => o.studio))];
-    console.log(oscarStudios);
 
+    //------Attribution des couleurs voulues aux studios ayant produit des films oscarisés
     let colors = ["8A0B12", "F7DCCA", "E8A888", "878787", "CB7A00", "9FAE42", "F2F2F2", "00604E"];
     oscarStudios.forEach((s,i) => {
       s.color = "#" + colors[i];
     });
-    console.log(datastudios)
+  
 
-
-
-
-    //Création du chart à vue générale----------------------------------------------------------------------------------------
+    // Création du chart
 
     //------Création du svg dans la div, viewbox pour responsive
     const svg = d3
@@ -158,7 +155,7 @@ fetch('moviedata.json')
       .attr("width", "1")
       .attr("xlink:href",  d => `img/${d.year}.png`)
 
-    //Création de la légende couleur = studio
+    // Création de la légende couleur = studio
     let legende = d3.select("#leg")
     .append("svg")
     .attr("viewBox", "0 0 250 195");
@@ -171,21 +168,21 @@ fetch('moviedata.json')
       .attr("class", d => "studio"+d.id)
       .append("circle")
       .attr("cx", 8)
-      .attr("cy", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
+      .attr("cy", (d, i) => 8 + i * 25)
       .attr("r", 8)
       .style("fill", d => d.color);
 
     legende.selectAll("g")
       .append("text")
       .attr("x", 30)
-      .attr("y", (d, i) => 8 + i * 25) // 8 is where the first dot appears. 25 is the distance between dots
+      .attr("y", (d, i) => 8 + i * 25)
       .text(d => d.name)
       .attr("text-anchor", "left")
       .style("alignment-baseline", "middle")
       .style("fill", "#eeeeee");
 
 
-    //------Ajout des events au survol et clic (opacité, détails, scroll sur le deuxième chart, musique)
+    // Ajout des events au survol et clic (opacité : films/studios, scroll sur les détails, image, musique)
     grp.selectAll(".subgroup")
       .on("mouseover", function (e, d) {
         d3.selectAll(".subgroup")
@@ -238,12 +235,9 @@ fetch('moviedata.json')
           block: "center"
         });
 
-        const f = document.querySelector("film-container");
-
         let sameNom = data.filter(movie =>
           movie.year == d.year
         );
-        console.log(sameNom);
 
         d3.selectAll(".o1, .o0").remove();
 
@@ -307,4 +301,4 @@ fetch('moviedata.json')
           .duration(200)
           .style("opacity", null);
       })
-  })
+  });
