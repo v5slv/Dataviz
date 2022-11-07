@@ -181,8 +181,9 @@ text{
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
 
-.winner-text p{
+.film-text-container p{
     transform: skew(-5.7deg) rotate(-5.7deg);
+    margin: 0;
 }
 
 .nom-container {
