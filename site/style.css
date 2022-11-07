@@ -190,7 +190,8 @@ footer {
 }
 
 .icone-film {
-    width: 40%;
+    max-width: 40%;
+    max-height: 60%;
 }
 
 .o1 {
