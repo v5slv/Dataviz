@@ -123,6 +123,12 @@ text{
     max-width: 70vw;
 }
 
+.explication-text {
+    font-size: 1.5rem;
+    max-width: 950px;
+    min-width: 600px;
+}
+
 
 .tick {
     font-size: 0.5rem;
