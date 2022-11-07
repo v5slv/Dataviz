@@ -263,13 +263,6 @@ fetch('moviedata.json')
         .append("p")
         .attr("class", "o0")
         .html(d => d.title);
-
-
-
-        // d3.select("winner-container")
-        // .append("p", ":first-child")
-        // .html(d => "autres films nominés en " + d.year);
-       
         
         d3.select(".icone-film")
         .attr("src", `img/${d.year}.png` )
@@ -313,89 +306,4 @@ fetch('moviedata.json')
           .duration(200)
           .style("opacity", null);
       })
-
-
-      // d3
-      // .select("#suite")
-      // .append("svg")
-      // .attr("viewBox", "0 0 200 200")
-      // .attr("height", 100)
-      // .attr("width", 100)
-      // .append('circle')
-      // .attr('cx', 100)
-      // .attr('cy', 100)
-      // .attr('r', 50)
-      // .attr('stroke', 'black')
-      // .attr('fill', '#69a3b2');
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //PARTIE HS POUR UN CHART AREA
-    //   const area = d3
-    //     .area()
-    //     .x(d => xScale(d.year))
-    //     .y0(height)
-    //     .y1(d => yScale(d.popularity));
-
-    // Add area
-    //   grp
-    //     .append("path")
-    //     .attr("transform", `translate(${margin.left},0)`)
-    //     .datum(data)
-    //     .style("fill", "lightblue")
-    //     .attr("stroke", "steelblue")
-    //     .attr("stroke-linejoin", "round")
-    //     .attr("stroke-linecap", "round")
-    //     .attr("stroke-width", strokeWidth)
-    //     .attr("d", area);
-
-    //Ajout barres de données
-    // grp
-    //   .selectAll("rect")
-    //   .data(data)
-    //   .enter()
-    //   .append("rect")
-    //   .attr("transform",`translate(${margin.left},0)`)
-    //   .style("fill", "lightblue")
-    //   .attr("x", d => xScale(d.year))
-    //   .attr("width", xScale.bandwidth())
-    //   .attr("y", d => yScale(d.rating))
-    //   .attr("height", d => height - yScale(d.rating));
-
-    //Ajout d'une sous-échelle pour mettre plusieurs barres par année
-    // const xSubScale = d3
-    //   .scaleBand()
-    //   .domain(subgroups)
-    //   .range([0, x.bandwidth()])
-    //   .padding([0.05])
-
-    // let yearGroup = [];
-    // let yearpush = new Object(annees.map(a => yearGroup.push({
-    //   'year': a,
-    //   'film': oscarGroup.filter(o => o.year == a)
-    // })));
-    // console.log(yearGroup);
-
-
-    //------Fonction de couleur random à attribuer à chaque studio
-    // function RandomColor() {
-    //   var letters = '0123456789ABCDEF';
-    //   var color = '#';
-    //   for (var i = 0; i < 6; i++) {
-    //     color += letters[Math.floor(Math.random() * 16)];
-    //   }
-    //   return color;
-    // }
   })
