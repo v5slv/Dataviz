@@ -162,9 +162,18 @@ text{
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
 
+.o1{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
 .other{
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+}
+
+.o0{
+    font-size: 1.3rem;
 }
 
 .film-container{
