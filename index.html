@@ -62,12 +62,15 @@
         </div>
         <div class="audio">
             <audio autoplay></audio>
-            <div id="play_pause"><img src="img/pause.svg" alt="Pause music"></div>
+            <div id="play_pause"><img src="img/pause.svg" alt="Play or pause music"></div>
             <div id="replay"><img src="img/replay.svg" alt="Replay music"></div>
-            <div id="loop"><img src="img/loop.svg" alt="Play music on loop"></div>
-            <label>
-                Volume : <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
-            </label>
+            <div id="loop"><img src="img/loop.svg" alt="Play or disable music on loop"></div>
+            <div class="volume-container">
+                <img id="volume-btn" src="img/sound.svg" alt="Mute or unmute music">
+                <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
+            </div>
+            
+           
         </div>
     </div>
 

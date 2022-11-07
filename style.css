@@ -204,15 +204,24 @@ text{
     margin-top: 2rem;
 }
 
+
 #play_pause, #replay, #loop {
-    width: 10%;
+    max-width: 100%;
     cursor: pointer;
 }
 
-#volume {
+.volume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
     accent-color: #ffc400;
 }
 
+#volume-btn {
+    width: 10%;
+    cursor: pointer;
+}
 
 footer {
     padding: 1em;

@@ -3,6 +3,7 @@ let play_pause = document.querySelector("#play_pause img");
 let loop = document.querySelector("#loop img");
 let replay = document.querySelector("#replay");
 let slide = document.querySelector("#volume");
+let volumebtn = document.querySelector("#volume-btn")
 
 
 play_pause.addEventListener("click", () => {
@@ -43,6 +44,16 @@ replay.addEventListener("click", () => {
 
 slide.addEventListener("change", e => {
     audio.volume = e.currentTarget.value;
+});
+
+volumebtn.addEventListener("click", () => {
+    if (audio.volume != 0) {
+        volumebtn.src = "img/no-sound.svg"
+        audio.volume = 0;
+    } else {
+        volumebtn.src = "img/sound.svg"
+        audio.volume = 1;
+    }
 });
 
 
