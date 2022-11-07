@@ -159,7 +159,8 @@ fetch('moviedata.json')
     // Création de la légende couleur = studio
     let legende = d3.select("#leg")
     .append("svg")
-    .attr("viewBox", "0 0 250 195");
+    .attr("viewBox", "0 0 250 195")
+    .attr("aria-label", "Studios legend");
 
     //------Ajout des groupes de la légende : un point de couleur et le studio associé
     legende.selectAll("g")
@@ -259,7 +260,7 @@ fetch('moviedata.json')
         .filter(d => d.oscar == 0)
         .append("p")
         .attr("class", "o0")
-        .html(d => `${d.title} <span class="rating">(rating : ${d.rating})</span>`);
+        .html(d => `${d.title} <span class="rating">(Rating : ${d.rating})</span>`);
         
         d3.select(".icone-film")
         .attr("src", `img/${d.year}.png` )
