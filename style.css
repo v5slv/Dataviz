@@ -5,7 +5,6 @@
 
 html {
     height: 100%;
-    
 }
 
 body {
@@ -66,6 +65,7 @@ text{
 .fleche-bas {
     width: 6vmax;
     animation: bounce 0.6s ease-in infinite alternate;
+    padding-bottom: 1em;
 }
 
 @keyframes bounce{
@@ -178,8 +178,6 @@ text{
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
 
-
-
 .film-text-container p{
     transform: skew(-5.7deg) rotate(-5.7deg);
     margin: 0;
@@ -202,13 +200,13 @@ text{
     flex-direction: column;
 }
 
-#play_pause {
+#play_pause, #replay, #loop {
     width: 10%;
     cursor: pointer;
 }
 
 #play_pause img {
-    max-width: 100%;
+    width: 5vw;
 }
 
 

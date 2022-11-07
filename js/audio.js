@@ -1,28 +1,33 @@
 let audio = document.querySelector("audio");
 let play_pause = document.querySelector("#play_pause img");
-let loop = document.querySelector("#loop");
+let loop = document.querySelector("#loop img");
 let replay = document.querySelector("#replay");
 let slide = document.querySelector("#volume");
 
 
 play_pause.addEventListener("click", () => {
     if (audio.paused == true) {
-        audio.play();
-        play_pause.removeAttribute("src", "img/pause.svg");
-        play_pause.setAttribute("src", "img/play.svg");
+        audio.play()
+        play_pause.src = "img/pause.svg";
+        console.log("play")
     } else {
         audio.pause();
-        play_pause.removeAttribute("src", "img/play.svg");
-        play_pause.setAttribute("src", "img/pause.svg");
+        play_pause.src = "img/play.svg";
+        console.log("pause")
     }
 });
+
 
 loop.addEventListener("click", () => {
     if (audio.hasAttribute("loop")) {
         audio.removeAttribute("loop");
+        loop.src = "img/loop.svg"
+        loop.style = "opacity: 1";
         console.log("loop removed");
     } else {
         audio.setAttribute("loop", true);
+        loop.src = "img/loop-dea.svg"
+        loop.style = "opacity: .4";
         console.log("loop added");
     }
 });
