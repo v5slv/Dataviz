@@ -118,6 +118,7 @@ fetch('moviedata.json')
       .data(oscarGroup)
       .enter()
       .append("g")
+      .attr("tabindex", 0)
       .attr("class", d => `subgroup studio${d.studio.id}`)
       .append("rect")
       .attr("class", "barre")
@@ -227,8 +228,9 @@ fetch('moviedata.json')
           .transition()
           .duration(200)
           .style("opacity", null);
-      })
-      .on("click", function (e, d) {
+      });
+
+      function addDetails(e,d) {
         document.getElementById("suite").style.display = "flex";
         document.getElementById("suite").scrollIntoView({
           behavior: "smooth",
@@ -264,9 +266,11 @@ fetch('moviedata.json')
 
         d3.select("audio")
           .attr("src", `ost/${d.year}.mp3`);
+      }
 
-      });
-
+      grp.selectAll(".subgroup").on("click", addDetails);
+      // Ajout d'event focus pour que les éléments détaillés puissent être accessibles via la navigation au clavier
+      grp.selectAll(".subgroup").on("focus", addDetails); 
 
     legende.selectAll("g")
       .on("mouseover", function (e, d) {
