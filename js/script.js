@@ -254,7 +254,7 @@ fetch('moviedata.json')
         .filter(d => d.oscar ==1)
         .append("p")
         .attr("class", "o1")
-        .html(d => `<span class="wintitle">${d.title}</span><br>${d.year} winning film`);
+        .html(d => `<span class="wintitle">${d.title}</span><br>${d.year} winning film <span class="rating">(rating : ${d.rating})</span>`);
         
         d3.select(".nom-container")
         .selectAll(".o")
@@ -263,7 +263,7 @@ fetch('moviedata.json')
         .filter(d => d.oscar == 0)
         .append("p")
         .attr("class", "o0")
-        .html(d => d.title);
+        .html(d => `${d.title} <span class="rating">(rating : ${d.rating})</span>`);
         
         d3.select(".icone-film")
         .attr("src", `img/${d.year}.png` )

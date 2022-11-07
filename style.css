@@ -193,19 +193,6 @@ text{
     font-size: 1.2rem;
 }
 
-.other{
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    background-color: #ffc400;
-    color: #170e1a;
-    width: fit-content;
-    padding: 0.2em 0.5em;
-
-}
-
-.o0{
-    font-size: 1.3rem;
-}
 
 .film-container{
     display: flex;
@@ -227,14 +214,35 @@ text{
 
 .film-text-container p{
     transform: skew(-5.7deg) rotate(-5.7deg);
+}
+
+.other{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    background-color: #ffc400;
+    box-shadow: 1vmin 1vmin 0 #751a1a;
+    color: #170e1a;
+    width: fit-content;
+    padding: 0.2em 0.5em;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.o0{
+    font-size: 1.3rem;
     margin: 0;
+}
+
+.rating {
+    font-size: .8em;
+    font-weight: 300;
+    opacity: .5;
 }
 
 .nom-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 3em;
 }
 
 .img-audio-flex {
