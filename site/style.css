@@ -1,0 +1,226 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+    background-color: #170e1a;
+    color: #eeeeee;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+text{
+ 
+    fill:#eeeeee;
+}
+
+.fleche-retour {
+    position: sticky;
+    top: 94vh;
+    left: 96%;
+    transform: rotate(-90deg);
+    width: 1em;
+}
+
+.accroche {
+    height: 100vh;
+    width: 100%;
+    padding: 0 10vh;
+    font-size: 2em;
+    background: linear-gradient(#0d0000, #170e1a);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accroche h1 {
+    font-size: 7.5vmax;
+    transform: skew(-5.7deg) rotate(-5.7deg);
+    text-transform: uppercase;
+    color: #ffc400;
+    margin-top: 1.5em;
+    opacity: 0;
+    animation: title 1s 200ms;
+    animation-fill-mode: forwards;  
+    
+}
+
+@keyframes title{
+    from {opacity: 0;}
+    to   {text-shadow: 0.6vmin 0.6vmin 0 #751a1a, -1vmin -1vmin 0 #42183b;opacity: 1;}
+}
+
+.fleche-bas {
+    width: 6vmax;
+    animation: bounce 0.6s ease-in infinite alternate;
+}
+
+@keyframes bounce{
+    from {transform: translateY(0px);}
+    to   {transform: translateY(10px);}
+}
+
+.vueglob {
+    margin-bottom: 10vh;
+    padding-top: 10vh;
+}
+
+.flex-vueglob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 2vh;
+}
+
+#chart {
+    display: block;
+    width: 70%;
+}
+
+#leg {
+    display: block;
+    width: 20%;
+}
+  
+.selection {
+    fill: none;
+}
+
+.explication-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 70vw;
+}
+
+.tick {
+    font-size: 0.5rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+.chart-tooltip {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0;
+    color: black;
+}
+
+.tooltip-film {
+    font-weight: 800;
+}
+
+.titlechart {
+    text-align: center;
+    margin: 0;
+}
+
+#suite {
+    margin: 0 auto 30vh auto;
+    width: 80%;
+    
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.clicktoknow-container {
+    width: 80%;
+    margin: 3em auto;
+}
+
+.titlechart-container{
+    text-align: center;
+}
+
+
+.titlechart{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 2.5vmax;
+    transform: skew(-5.7deg);
+    text-transform: uppercase;
+    color: #ffd859;
+    margin: 0;
+    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
+}
+
+.film-container{
+    display: flex;
+}
+
+.winner-container{
+    display: flex;
+    gap: 2em;
+}
+
+.wintitle{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 3vmax;
+    text-transform: uppercase;
+    color: #ffd859;
+    margin: 0;
+    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
+}
+
+.winner-text p{
+    transform: skew(-5.7deg) rotate(-5.7deg);
+}
+
+.nom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icone-film {
+    height: 70%;
+    width: 50%;
+    object-fit: contain;
+}
+
+.audio{
+    display: flex;
+    flex-direction: column;
+}
+
+#play_pause {
+    width: 10%;
+    cursor: pointer;
+}
+
+#play_pause img {
+    max-width: 100%;
+}
+
+
+
+footer {
+    padding: 1em;
+    background-color: #0e0e0e;
+    text-align: center;
+}
+
+
+
+
+
+
