@@ -134,7 +134,8 @@ text{
     margin: 0 auto 30vh auto;
     width: 80%;
     
-    display: none;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: baseline;
 }
@@ -172,8 +173,12 @@ text{
 .nom-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+}
+
+.audio{
+    display: flex;
+    flex-direction: column;
 }
 
 
