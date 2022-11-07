@@ -253,7 +253,7 @@ fetch('moviedata.json')
         .filter(d => d.oscar ==1)
         .append("p")
         .attr("class", "o1")
-        .html(d => `${d.title}<br>${d.year} winning film`);
+        .html(d => `<span class="wintitle">${d.title}</span><br>${d.year} winning film`);
         
         d3.select(".nom-container")
         .selectAll(".o")

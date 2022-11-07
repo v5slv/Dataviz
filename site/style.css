@@ -5,6 +5,7 @@
 
 html {
     height: 100%;
+    
 }
 
 body {
@@ -21,7 +22,7 @@ h1 {
 }
 
 text{
-    font-family: 'Mukta', sans-serif;
+ 
     fill:#eeeeee;
 }
 
@@ -169,6 +170,20 @@ text{
     gap: 2em;
 }
 
+.wintitle{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 3vmax;
+    text-transform: uppercase;
+    color: #ffd859;
+    margin: 0;
+    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
+}
+
+.winner-text p{
+    transform: skew(-5.7deg) rotate(-5.7deg);
+}
+
 .nom-container {
     display: flex;
     flex-direction: column;
@@ -176,7 +191,10 @@ text{
     justify-content: center;
 }
 
-
+.icone-film {
+    max-width: 50%;
+    min-height: 60%;
+}
 
 
 
@@ -186,14 +204,6 @@ footer {
     text-align: center;
 }
 
-.icone-film {
-    max-width: 40%;
-    max-height: 60%;
-}
-
-.o1 {
-    font-size: 2em;
-}
 
 
 
