@@ -44,6 +44,8 @@ replay.addEventListener("click", () => {
 
 slide.addEventListener("change", e => {
     audio.volume = e.currentTarget.value;
+    if (e.currentTarget.value == 0) {
+    }
 });
 
 volumebtn.addEventListener("click", () => {
@@ -55,7 +57,6 @@ volumebtn.addEventListener("click", () => {
         volumebtn.src = "img/sound.svg"
         audio.volume = 1;
         slide.value = 1;
-        console.log(slide.value)
         
     }
 });

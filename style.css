@@ -36,24 +36,24 @@ text{
 .accroche {
     height: 100vh;
     width: 100%;
-    padding: 0 10vh;
+    padding: 0 1em;
     background: linear-gradient(#0d0000, #170e1a);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .accroche h1 {
+    padding: 0 1em;
     font-size: 7vmax;
     transform: skew(-5.7deg) rotate(-5.7deg);
     text-transform: uppercase;
     color: #ffc400;
-    margin-top: 1.5em;
+    margin: 1.5em auto;
     opacity: 0;
     animation: title 1s 200ms;
     animation-fill-mode: forwards;  
-    
 }
 
 .floating { 
@@ -65,11 +65,11 @@ text{
     margin-top: 5px;
 }
 
-@keyframes floating {
+/* @keyframes floating {
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 15px); }
     100%   { transform: translate(0, -0px); }   
-}
+} */
 
 @keyframes title{
     from {opacity: 0;}
@@ -148,7 +148,6 @@ text{
 #suite {
     margin: 0 auto 30vh auto;
     width: 80%;
-    
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -164,6 +163,19 @@ text{
     text-align: center;
 }
 
+.titlechart-surligne{
+    background-color: #ffc400;
+    width: fit-content;
+    margin: auto;
+    padding: 0 1em;
+    transform: skew(-5.7deg);
+}
+
+.titlechart-surligne > p {
+    transform: skew(5.7deg);
+    color: #170e1a;
+}
+
 
 .titlechart{
     font-family: 'Inter', sans-serif;
@@ -171,7 +183,7 @@ text{
     font-size: 2.5vmax;
     transform: skew(-5.7deg);
     text-transform: uppercase;
-    color: #ffd859;
+    color: #ffc400;
     margin: 0;
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
@@ -195,6 +207,7 @@ text{
     justify-content: space-around;
     align-items: center;
     gap: 2em;
+    
 }
 
 .wintitle{
@@ -202,7 +215,7 @@ text{
     font-weight: bold;
     font-size: 4vmax;
     text-transform: uppercase;
-    color: #ffd859;
+    color: #ffc400;
     margin: 0;
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
@@ -225,6 +238,7 @@ text{
 }
 
 .audio{
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
