@@ -244,29 +244,24 @@ fetch('moviedata.json')
         );
         console.log(sameNom);
 
-        d3.select(f)
-        .selectAll(".tempo").remove();
+        d3.selectAll(".o1, .o0").remove();
 
         d3.select(".winner-text")
-        .selectAll(".tempo")
+        .selectAll(".o1")
         .data(sameNom)
         .enter()
         .filter(d => d.oscar ==1)
         .append("p")
-        .attr("class", "tempo o1")
+        .attr("class", "o1")
         .html(d => `${d.title}<br>${d.year} winning film`);
-
-        d3.select(".nom-container")
-        .append("p")
-        .html("Other nominated films the same year :");
         
         d3.select(".nom-container")
-        .selectAll("p")
+        .selectAll(".o")
         .data(sameNom)
         .enter()
         .filter(d => d.oscar == 0)
         .append("p")
-        .attr("class", "tempo")
+        .attr("class", "o0")
         .html(d => d.title);
 
 
