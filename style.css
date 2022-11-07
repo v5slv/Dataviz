@@ -126,7 +126,6 @@ text{
 .explication-text {
     font-size: 1.5rem;
     max-width: 950px;
-    min-width: 600px;
 }
 
 
@@ -191,7 +190,7 @@ text{
     text-transform: uppercase;
     color: #ffc400;
     margin: 0;
-    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
+    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;
 }
 
 .o1{
@@ -215,7 +214,7 @@ text{
     text-transform: uppercase;
     color: #ffc400;
     margin: 0;
-    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
+    text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;
 }
 
 .film-text-container p{
