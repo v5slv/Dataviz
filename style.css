@@ -162,11 +162,6 @@ text{
     text-shadow: 0.3vmin 0.3vmin 0 #751a1a, -0.8vmin -0.8vmin 0 #42183b;opacity: 1;
 }
 
-.other{
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-
 .film-container{
     display: flex;
     justify-content: space-around;
@@ -203,8 +198,7 @@ text{
 
 .audio{
     display: flex;
-    flex-direction: row;
-    gap: 1em;
+    flex-direction: column;
 }
 
 #play_pause, #replay, #loop {
@@ -212,7 +206,9 @@ text{
     cursor: pointer;
 }
 
-
+#volume {
+    accent-color: #ffc400;
+}
 
 
 footer {
