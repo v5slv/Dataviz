@@ -148,6 +148,36 @@ text{
     align-items: baseline;
 }
 
+.click-to-know{
+    font-size: 2.5vmax;
+    transform: skew(-5.7deg);
+    text-transform: uppercase;
+    color: #ffc400;
+    margin-top: 1.5em;
+    opacity: 0;
+    animation: title 1s 200ms;
+    animation-fill-mode: forwards;  
+    text-align: center;
+}
+
+.film-container{
+    display: flex;
+}
+
+.winner-container{
+    display: flex;
+    gap: 2em;
+}
+
+.nom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 footer {
     padding: 1em;
     background-color: #0e0e0e;
@@ -162,12 +192,7 @@ footer {
     font-size: 2em;
 }
 
-.nom-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 
 
