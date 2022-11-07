@@ -177,6 +177,11 @@ text{
 }
 
 
+.explication-text{
+    max-width: 60vw;
+}
+
+
 
 footer {
     padding: 1em;
