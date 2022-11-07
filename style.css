@@ -242,13 +242,15 @@ text{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 2.5em;
 }
 
 .icone-film {
     max-height: 60%;
     max-width: 60%;
     object-fit: contain;
+    border-radius: 100%;
+    box-shadow: 1vmin 1vmin 0 #751a1a, -3vmin -1vmin 0 #42183b;
 }
 
 .audio{
