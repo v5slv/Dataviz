@@ -164,6 +164,7 @@ text{
 
 .film-container{
     display: flex;
+    gap: 2em;
 }
 
 .winner-container{
