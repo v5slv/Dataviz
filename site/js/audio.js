@@ -1,5 +1,5 @@
 let audio = document.querySelector("audio");
-let play_pause = document.querySelector("#play_pause");
+let play_pause = document.querySelector("#play_pause img");
 let loop = document.querySelector("#loop");
 let replay = document.querySelector("#replay");
 let slide = document.querySelector("#volume");
@@ -8,10 +8,12 @@ let slide = document.querySelector("#volume");
 play_pause.addEventListener("click", () => {
     if (audio.paused == true) {
         audio.play();
-        play_pause.innerHTML = "‖";
+        play_pause.removeAttribute("src", "img/pause.svg");
+        play_pause.setAttribute("src", "img/play.svg");
     } else {
         audio.pause();
-        play_pause.innerHTML = "▶";
+        play_pause.removeAttribute("src", "img/play.svg");
+        play_pause.setAttribute("src", "img/pause.svg");
     }
 });
 

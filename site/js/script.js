@@ -35,7 +35,7 @@ fetch('moviedata.json')
     let oscarStudios = [...new Set(oscarGroup.map(o => o.studio))];
     console.log(oscarStudios);
 
-    let colors = ["8A0B12", "F7DCCA", "E8A888", "878787", "CB7A00", "9FAE42", "F2F2F2", "00604E"]
+    let colors = ["8A0B12", "F7DCCA", "E8A888", "878787", "CB7A00", "9FAE42", "F2F2F2", "00604E"];
     oscarStudios.forEach((s,i) => {
       s.color = "#" + colors[i];
     });
