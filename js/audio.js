@@ -50,9 +50,13 @@ volumebtn.addEventListener("click", () => {
     if (audio.volume != 0) {
         volumebtn.src = "img/no-sound.svg"
         audio.volume = 0;
+        slide.value = 0;
     } else {
         volumebtn.src = "img/sound.svg"
         audio.volume = 1;
+        slide.value = 1;
+        console.log(slide.value)
+        
     }
 });
 
