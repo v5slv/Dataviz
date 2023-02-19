@@ -1,6 +1,6 @@
 # The coolest dataviz
 Data visualization project - MMI2 2022, University of Gustave Eiffel <br>
-Valérie Lapeyre, Samuel Miguel, Samuel Enriquez-Sarano <br>
+Made by : Valérie Lapeyre, Samuel Miguel, Samuel Enriquez-Sarano <br>
 <br>
 Data sources: <br>
 - https://fr.wikipedia.org/wiki/Oscar_du_meilleur_film_d%27animation
